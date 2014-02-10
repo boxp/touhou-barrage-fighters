@@ -1,0 +1,157 @@
+html,body {
+  background-color: black;
+  height: 100%;
+  margin: 0;
+}
+
+img#serihu {
+  user-select: none; /* CSS3 */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari、Chromeなど */
+  -ms-user-select: none; /* IE10かららしい */
+}
+
+div#wrapper {
+  width: 900px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/stage/hakurei_temple.jpg");
+}
+
+div#sidebar {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+div#info {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  height: 20%;
+}
+
+div#content {
+  color: black;
+  height: 100%;
+  width: 70%;
+  margin-left: auto;
+}
+
+div.sidebar-banner {
+  font-size: 2em; 
+  padding: 10px;
+  color: white;
+}
+
+div.sidebar-banner:hover {
+  font-size: 2em; 
+  padding: 10px;
+  color: white;
+  background-color: rgba(200,200,200,0.3);
+}
+
+div#form-wrapper {
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#form {
+  height: 30%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#player-name,div#player-pass {
+  color: white;
+}
+
+p#name-lbl,p#pass-lbl {
+  color: white;
+}
+
+input#game-start {
+  margin: 10px 0 0 0;
+}
+
+div#message-button-wrapper {
+  width:30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#pos-button {
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#message-wrapper {
+  height: 100%;
+  width: 70%;
+  background-color: rgba(0,0,0,0.5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#message {
+  height: 70%;
+  width: 100%;
+  overflow-y: scroll;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+div#tutorial-lbl {
+  padding: 30px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 3em;
+}
+
+div#character {
+  margin-left: auto;
+  width: 100%;
+}
+
+img#tatie {
+  margin-top: auto;
+  bottom: 0;
+  width: 60%;
+}
+
+div#serihu-wrapper {
+  float: right;
+  width: 40%;
+  position: relative;
+}
+
+img#hukidasi {
+  width: 100%;
+  position: relative;
+}
+
+div#serihu {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+}
+
+div#shutter {
+  top: 0;
+  position:absolute;
+  height: 0%;
+  width: 100%;
+  background-image: url(../img/stage/shutter.jpg);
+  background-repeat: repeat;
+}
