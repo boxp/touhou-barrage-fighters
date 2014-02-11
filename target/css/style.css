@@ -1,7 +1,7 @@
-html,body {
+body {
   background-color: black;
   height: 100%;
-  margin: 0;
+  width: 100%;
 }
 
 img#serihu {
@@ -149,9 +149,24 @@ div#serihu {
 
 div#shutter {
   top: 0;
+  margin: 0;
   position:absolute;
   height: 0%;
   width: 100%;
   background-image: url(../img/stage/shutter.jpg);
   background-repeat: repeat;
+}
+
+div#map-wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/stage/hakurei_temple.jpg");
+}
+
+div#map-list {
+  margin: 50px;
+}
+
+div#map-list > div {
+  
 }

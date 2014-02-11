@@ -3556,16 +3556,16 @@ cljs.core.fn_QMARK_ = function(a) {
 };
 cljs.core.with_meta = function with_meta(b, c) {
   return cljs.core.fn_QMARK_.call(null, b) && !(b ? b.cljs$lang$protocol_mask$partition0$ & 262144 || b.cljs$core$IWithMeta$ || (b.cljs$lang$protocol_mask$partition0$ ? 0 : cljs.core.native_satisfies_QMARK_.call(null, cljs.core.IWithMeta, b)) : cljs.core.native_satisfies_QMARK_.call(null, cljs.core.IWithMeta, b)) ? with_meta.call(null, function() {
-    "undefined" === typeof cljs.core.t5612 && (cljs.core.t5612 = function(b, c, f, g) {
+    "undefined" === typeof cljs.core.t5567 && (cljs.core.t5567 = function(b, c, f, g) {
       this.meta = b;
       this.o = c;
       this.with_meta = f;
-      this.meta5613 = g;
+      this.meta5568 = g;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393217;
-    }, cljs.core.t5612.cljs$lang$type = !0, cljs.core.t5612.cljs$lang$ctorStr = "cljs.core/t5612", cljs.core.t5612.cljs$lang$ctorPrWriter = function(b, c, f) {
-      return cljs.core._write.call(null, c, "cljs.core/t5612");
-    }, cljs.core.t5612.prototype.call = function() {
+    }, cljs.core.t5567.cljs$lang$type = !0, cljs.core.t5567.cljs$lang$ctorStr = "cljs.core/t5567", cljs.core.t5567.cljs$lang$ctorPrWriter = function(b, c, f) {
+      return cljs.core._write.call(null, c, "cljs.core/t5567");
+    }, cljs.core.t5567.prototype.call = function() {
       var b = function(b, c) {
         return cljs.core.apply.call(null, b.o, c);
       }, c = function(c, e) {
@@ -3582,9 +3582,9 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c;
-    }(), cljs.core.t5612.prototype.apply = function(b, c) {
+    }(), cljs.core.t5567.prototype.apply = function(b, c) {
       return this.call.apply(this, [this].concat(cljs.core.aclone.call(null, c)));
-    }, cljs.core.t5612.prototype.cljs$core$IFn$_invoke$arity$2 = function() {
+    }, cljs.core.t5567.prototype.cljs$core$IFn$_invoke$arity$2 = function() {
       var b = function(b) {
         return cljs.core.apply.call(null, self__.o, b);
       }, c = function(c) {
@@ -3599,14 +3599,14 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c;
-    }(), cljs.core.t5612.prototype.cljs$core$Fn$ = !0, cljs.core.t5612.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-      return this.meta5613;
-    }, cljs.core.t5612.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-      return new cljs.core.t5612(this.meta, this.o, this.with_meta, c);
-    }, cljs.core.__GT_t5612 = function(b, c, f, g) {
-      return new cljs.core.t5612(b, c, f, g);
+    }(), cljs.core.t5567.prototype.cljs$core$Fn$ = !0, cljs.core.t5567.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+      return this.meta5568;
+    }, cljs.core.t5567.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+      return new cljs.core.t5567(this.meta, this.o, this.with_meta, c);
+    }, cljs.core.__GT_t5567 = function(b, c, f, g) {
+      return new cljs.core.t5567(b, c, f, g);
     });
-    return new cljs.core.t5612(c, b, with_meta, null);
+    return new cljs.core.t5567(c, b, with_meta, null);
   }(), c) : null == b ? null : cljs.core._with_meta.call(null, b, c);
 };
 cljs.core.meta = function(a) {
@@ -18087,13 +18087,13 @@ try {
   Window.prototype.dommy$template$PElement$ = !0, Window.prototype.dommy$template$PElement$_elem$arity$1 = function(a) {
     return this;
   };
-} catch (e7002) {
-  if (e7002 instanceof ReferenceError) {
-    var __7003 = e7002;
+} catch (e6957) {
+  if (e6957 instanceof ReferenceError) {
+    var __6958 = e6957;
     console.log("PElement: js/Window not defined by browser, skipping it... (running on phantomjs?)");
   } else {
     if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-      throw e7002;
+      throw e6957;
     }
   }
 }
@@ -18640,6 +18640,27 @@ dommy.core.fire_BANG_ = function() {
   return b;
 }();
 var touhou_barrage_fighters = {ui:{}};
+touhou_barrage_fighters.ui.in_map = function() {
+  var a = document.createElement("div");
+  a.className = "root";
+  a.setAttribute("id", "map-wrapper");
+  a.appendChild(function() {
+    var a = document.createElement("div");
+    a.setAttribute("id", "map-list");
+    a.appendChild(function() {
+      var a = document.createElement("div");
+      a.appendChild(document.createTextNode("\u5996\u602a\u9000\u6cbb"));
+      return a;
+    }());
+    a.appendChild(function() {
+      var a = document.createElement("div");
+      a.appendChild(document.createTextNode("\u7d05\u3044\u5996\u9727\u306e\u8b0e"));
+      return a;
+    }());
+    return a;
+  }());
+  return a;
+};
 touhou_barrage_fighters.ui.init_acount = function() {
   var a = document.createElement("div");
   a.className = "root";
@@ -19101,48 +19122,12 @@ touhou_barrage_fighters.data.map__GT_Spell = function(a) {
   return new touhou_barrage_fighters.data.Spell((new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "doc", "doc", 1014003882)).cljs$core$IFn$_invoke$arity$1(a), null, cljs.core.dissoc.call(null, a, new cljs.core.Keyword(null, "name", 
   "name", 1017277949), new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359), new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650), new cljs.core.Keyword(null, "doc", "doc", 1014003882)));
 };
-touhou_barrage_fighters.data.equipments = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "magic-clothe", "magic-clothe", 788188445), touhou_barrage_fighters.data.__GT_Equipment.call(null, "\u9b54\u6cd5\u4f7f\u3044\u306e\u670d", 10, 30, "\u9b54\u529b\u3092\u901a\u3057\u306b\u304f\u3044\u7d20\u6750\u3067\u51fa\u6765\u305f\u7279\u6b8a\u306a\u670d\u3001\u590f\u306f\u5c11\u3057\u6691\u3044\u3002"), new cljs.core.Keyword(null, "human-clothe", "human-clothe", 950183325), touhou_barrage_fighters.data.__GT_Equipment.call(null, 
-"\u666e\u901a\u306e\u670d", 10, 10, "\u5e7b\u60f3\u90f7\u306e\u5449\u670d\u5e97\u306b\u3042\u308b\u5b89\u4fa1\u306a\u670d\u3001\u98a8\u901a\u3057\u306e\u826f\u3044\u7d20\u6750\u3067\u51fa\u6765\u3066\u3044\u308b\u3002")], null);
-touhou_barrage_fighters.data.spells = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u970a\u6483", 10, 10, "\u4f7f\u7528\u8005\u306e\u5468\u308a\u306b\u885d\u6483\u306f\u3092\u653e\u3064\u3001\u6575\u3068\u306e\u9593\u5408\u3044\u3092\u4f7f\u3046\u6642\u306b\u5f79\u7acb\u3064\u3002"), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), touhou_barrage_fighters.data.__GT_Spell.call(null, 
-"\u5f3e\u5e55(\u5c0f)", 30, 30, "\u5c0f\u3055\u3044\u5f3e\u3092\u4e71\u308c\u6483\u3064\u3001\u5f53\u305f\u308b\u3068\u51c4\u304f\u75db\u3044\u3002"), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u5f3e\u5e55(\u4e2d)", 50, 50, "\u4e38\u3044\u5927\u304d\u306a\u5f3e\u3092\u4e71\u308c\u6483\u3064\u3001\u898b\u304b\u3051\u306b\u3088\u3089\u305a\u5f53\u305f\u308b\u3068\u3082\u306e\u51c4\u304f\u75db\u3044\u3002"), new cljs.core.Keyword(null, 
-"barrage-big", "barrage-big", 3576920837), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u5f3e\u5e55(\u5927)", 80, 80, "\u4eba\u304c\u3059\u3063\u307d\u308a\u57cb\u307e\u308b\u5927\u304d\u3055\u306e\u5f3e\u3092\u4e71\u308c\u6483\u3064\u3001\u6148\u60b2\u306f\u306a\u3044\u3002"), new cljs.core.Keyword(null, "shanghai", "shanghai", 4561485949), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u4e0a\u6d77\u4eba\u5f62", 130, 0, "\u4e8c\u672c\u306e\u69cd\u3092\u624b\u306b\u6301\u3063\u305f\u4eba\u5f62\u3092\u61d0\u304b\u3089\u53d6\u308a\u51fa\u3059\u3001\u8d64\u3044\u30ea\u30dc\u30f3\u304c\u30c1\u30e3\u30fc\u30e0\u30dd\u30a4\u30f3\u30c8\u3002\u4f7f\u7528\u8005\u306e\u970a\u529b\u304c\u6d88\u3048\u308b\u307e\u3067\u7559\u307e\u308a\u7d9a\u3051\u308b\u3002")], 
+touhou_barrage_fighters.data.equipments = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "magic-clothe", "magic-clothe", 788188445), touhou_barrage_fighters.data.__GT_Equipment.call(null, "\u9b54\u6cd5\u4f7f\u3044\u306e\u670d", 0, 2, "\u9b54\u529b\u3092\u901a\u3057\u306b\u304f\u3044\u7d20\u6750\u3067\u51fa\u6765\u305f\u7279\u6b8a\u306a\u670d\u3001\u590f\u306f\u5c11\u3057\u6691\u3044\u3002"), new cljs.core.Keyword(null, "human-clothe", "human-clothe", 950183325), touhou_barrage_fighters.data.__GT_Equipment.call(null, 
+"\u666e\u901a\u306e\u670d", 1, 1, "\u5e7b\u60f3\u90f7\u306e\u5449\u670d\u5e97\u306b\u3042\u308b\u5b89\u4fa1\u306a\u670d\u3001\u98a8\u901a\u3057\u306e\u826f\u3044\u7d20\u6750\u3067\u51fa\u6765\u3066\u3044\u308b\u3002")], null);
+touhou_barrage_fighters.data.spells = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u970a\u6483", 1, 1, "\u4f7f\u7528\u8005\u306e\u5468\u308a\u306b\u885d\u6483\u306f\u3092\u653e\u3064\u3001\u6575\u3068\u306e\u9593\u5408\u3044\u3092\u4f7f\u3046\u6642\u306b\u5f79\u7acb\u3064\u3002"), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), touhou_barrage_fighters.data.__GT_Spell.call(null, 
+"\u5f3e\u5e55(\u5c0f)", 2, 2, "\u5c0f\u3055\u3044\u5f3e\u3092\u4e71\u308c\u6483\u3064\u3001\u5f53\u305f\u308b\u3068\u51c4\u304f\u75db\u3044\u3002"), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u5f3e\u5e55(\u4e2d)", 3, 3, "\u4e38\u3044\u5927\u304d\u306a\u5f3e\u3092\u4e71\u308c\u6483\u3064\u3001\u898b\u304b\u3051\u306b\u3088\u3089\u305a\u5f53\u305f\u308b\u3068\u3082\u306e\u51c4\u304f\u75db\u3044\u3002"), new cljs.core.Keyword(null, 
+"barrage-big", "barrage-big", 3576920837), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u5f3e\u5e55(\u5927)", 5, 5, "\u4eba\u304c\u3059\u3063\u307d\u308a\u57cb\u307e\u308b\u5927\u304d\u3055\u306e\u5f3e\u3092\u4e71\u308c\u6483\u3064\u3001\u6148\u60b2\u306f\u306a\u3044\u3002"), new cljs.core.Keyword(null, "shanghai", "shanghai", 4561485949), touhou_barrage_fighters.data.__GT_Spell.call(null, "\u4e0a\u6d77\u4eba\u5f62", 130, 0, "\u4e8c\u672c\u306e\u69cd\u3092\u624b\u306b\u6301\u3063\u305f\u4eba\u5f62\u3092\u61d0\u304b\u3089\u53d6\u308a\u51fa\u3059\u3001\u8d64\u3044\u30ea\u30dc\u30f3\u304c\u30c1\u30e3\u30fc\u30e0\u30dd\u30a4\u30f3\u30c8\u3002\u4f7f\u7528\u8005\u306e\u970a\u529b\u304c\u6d88\u3048\u308b\u307e\u3067\u7559\u307e\u308a\u7d9a\u3051\u308b\u3002")], 
 null);
-touhou_barrage_fighters.data.SpellCardBattler = function() {
-  return{};
-}();
-touhou_barrage_fighters.data.say = function(a, b) {
-  if (a ? a.touhou_barrage_fighters$data$SpellCardBattler$say$arity$2 : a) {
-    return a.touhou_barrage_fighters$data$SpellCardBattler$say$arity$2(a, b);
-  }
-  var c;
-  c = touhou_barrage_fighters.data.say[goog.typeOf(null == a ? null : a)];
-  if (!c && (c = touhou_barrage_fighters.data.say._, !c)) {
-    throw cljs.core.missing_protocol.call(null, "SpellCardBattler.say", a);
-  }
-  return c.call(null, a, b);
-};
-touhou_barrage_fighters.data.grow = function(a, b) {
-  if (a ? a.touhou_barrage_fighters$data$SpellCardBattler$grow$arity$2 : a) {
-    return a.touhou_barrage_fighters$data$SpellCardBattler$grow$arity$2(a, b);
-  }
-  var c;
-  c = touhou_barrage_fighters.data.grow[goog.typeOf(null == a ? null : a)];
-  if (!c && (c = touhou_barrage_fighters.data.grow._, !c)) {
-    throw cljs.core.missing_protocol.call(null, "SpellCardBattler.grow", a);
-  }
-  return c.call(null, a, b);
-};
-touhou_barrage_fighters.data.attack = function(a, b, c) {
-  if (a ? a.touhou_barrage_fighters$data$SpellCardBattler$attack$arity$3 : a) {
-    return a.touhou_barrage_fighters$data$SpellCardBattler$attack$arity$3(a, b, c);
-  }
-  var d;
-  d = touhou_barrage_fighters.data.attack[goog.typeOf(null == a ? null : a)];
-  if (!d && (d = touhou_barrage_fighters.data.attack._, !d)) {
-    throw cljs.core.missing_protocol.call(null, "SpellCardBattler.attack", a);
-  }
-  return d.call(null, a, b, c);
-};
 touhou_barrage_fighters.data.Character = function(a, b, c, d, e, f, g, h, k, l, m, n, p, q) {
   this.words = a;
   this.hp = b;
@@ -19198,23 +19183,6 @@ touhou_barrage_fighters.data.Character.prototype.cljs$core$IPrintWithWriter$_pr_
 touhou_barrage_fighters.data.Character.prototype.cljs$core$ICollection$_conj$arity$2 = function(a, b) {
   return cljs.core.vector_QMARK_.call(null, b) ? cljs.core._assoc.call(null, this, cljs.core._nth.call(null, b, 0), cljs.core._nth.call(null, b, 1)) : cljs.core.reduce.call(null, cljs.core._conj, this, b);
 };
-touhou_barrage_fighters.data.Character.prototype.touhou_barrage_fighters$data$SpellCardBattler$ = !0;
-touhou_barrage_fighters.data.Character.prototype.touhou_barrage_fighters$data$SpellCardBattler$say$arity$2 = function(a, b) {
-  return dommy.utils.__GT_Array.call(null, document.querySelectorAll("#serihu")).innerHTML = cljs.core.rand_nth.call(null, b.call(null, (new cljs.core.Keyword(null, "words", "words", 1127222811)).cljs$core$IFn$_invoke$arity$1(this)));
-};
-touhou_barrage_fighters.data.Character.prototype.touhou_barrage_fighters$data$SpellCardBattler$grow$arity$2 = function(a, b) {
-  var c = math.pow((new cljs.core.Keyword(null, "level", "level", 1116770038)).cljs$core$IFn$_invoke$arity$1(this));
-  this.exp = (new cljs.core.Keyword(null, "exp", "exp", 1014005135)).cljs$core$IFn$_invoke$arity$1(this) + b;
-  return(new cljs.core.Keyword(null, "exp", "exp", 1014005135)).cljs$core$IFn$_invoke$arity$1(this) + b > c ? (this.level = (new cljs.core.Keyword(null, "level", "level", 1116770038)).cljs$core$IFn$_invoke$arity$1(this) + 1, this) : null;
-};
-touhou_barrage_fighters.data.Character.prototype.touhou_barrage_fighters$data$SpellCardBattler$attack$arity$3 = function(a, b, c) {
-  c = cljs.core.get.call(null, touhou_barrage_fighters.data.spells, c);
-  a = (new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359)).cljs$core$IFn$_invoke$arity$1(c) + (new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359)).cljs$core$IFn$_invoke$arity$1(this) - (new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093)).cljs$core$IFn$_invoke$arity$1(b);
-  c = (new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650)).cljs$core$IFn$_invoke$arity$1(c) + (new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650)).cljs$core$IFn$_invoke$arity$1(this) - (new cljs.core.Keyword(null, "m-defence", "m-defence", 4231833186)).cljs$core$IFn$_invoke$arity$1(b);
-  a = math.floor(cljs.core.rand.call(null, a > c ? a : c));
-  0 < a && (b.hp = a > (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(b) ? 0 : b.hp - a);
-  return b;
-};
 touhou_barrage_fighters.data.Character.prototype.cljs$core$ISeqable$_seq$arity$1 = function(a) {
   return cljs.core.seq.call(null, cljs.core.concat.call(null, new cljs.core.PersistentVector(null, 12, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "words", "words", 1127222811), this.words], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "hp", "hp", 1013907578), this.hp], null), new cljs.core.PersistentVector(null, 2, 
   5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359), this.p_attack], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650), this.m_attack], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093), this.p_defence], null), new cljs.core.PersistentVector(null, 
@@ -19258,13 +19226,13 @@ touhou_barrage_fighters.data.map__GT_Character = function(a) {
 touhou_barrage_fighters.data.characters = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "alice", "alice", 1106807282), touhou_barrage_fighters.data.__GT_Character.call(null, touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u68ee\u306e\u4eba\u5f62\u9063\u3044\u30a2\u30ea\u30b9\u30fb\u30de\u30fc\u30ac\u30c8\u30ed\u30a4\u30c9\u3088\u3001\u3088\u308d\u3057\u304f\u306d\u3002"], null), new cljs.core.PersistentVector(null, 
 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u7d05\u8336\u306f\u597d\u304d\u3060\u3051\u3069\u3001\u30b3\u30fc\u30d2\u30fc\u3082\u307e\u305f\u826f\u3044\u7269\u306d\u3002", "\u3053\u308c\u306f\u4f55\u304b\u3057\u3089\u2026\u30ad\u30ce\u30b3\u8336\uff1f\u9b54\u7406\u6c99\u306e\u304a\u571f\u7523\u306a\u306e\uff1f\u3061\u3087\u3001\u3061\u3087\u3063\u3068\u3060\u3051\u3044\u305f\u3060\u3053\u3046\u304b\u3057\u3089", "\u4eba\u5f62\u306e\u304a\u624b\u5165\u308c\u3082\u697d\u3058\u3083\u306a\u3044\u308f\u3088\u3001\u3042\u306a\u305f\u3082\u5c11\u3057\u624b\u4f1d\u3063\u3066\u3061\u3087\u3046\u3060\u3044\uff1f"], 
 null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u7518\u3044\u308f\u306d", "\u5f3e\u5e55\u306f\u30d6\u30ec\u30a4\u30f3\u3001\u5e38\u8b58\u3088", "\u3054\u3081\u3093\u306a\u3055\u3044\u3001\u5148\u3092\u6025\u3044\u3067\u3044\u308b\u306e"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u697d\u3057\u304f\u306a\u3063\u3066\u6765\u305f\u3058\u3083\u306a\u3044", "\u75db\u3044\u308f\u2026"], null), new cljs.core.PersistentVector(null, 
-3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u4f55\u304b\u7528\u304b\u3057\u3089\uff1f", "\u4eba\u306e\u4e8b\u3058\u308d\u3058\u308d\u898b\u3066\u3001\u3069\u3046\u3044\u3046\u3064\u3082\u308a\uff1f", "\u523a\u3059\u308f\u3088"], null)), 300, 30, 60, 30, 60, new cljs.core.Keyword(null, "witch", "witch", 1127045945), new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), 10, new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), 
-10, new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), 5, new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), 3, new cljs.core.Keyword(null, "shanghai", "shanghai", 4561485949), 1], null), new cljs.core.Keyword(null, "magic-clothe", "magic-clothe", 788188445), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/alice/normal.png", new cljs.core.Keyword(null, "wink", "wink", 1017553793), "img/chara/alice/wink.png", 
+3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u4f55\u304b\u7528\u304b\u3057\u3089\uff1f", "\u4eba\u306e\u4e8b\u3058\u308d\u3058\u308d\u898b\u3066\u3001\u3069\u3046\u3044\u3046\u3064\u3082\u308a\uff1f", "\u523a\u3059\u308f\u3088"], null)), 10, 2, 4, 2, 4, new cljs.core.Keyword(null, "witch", "witch", 1127045945), new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), 10, new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), 10, 
+new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), 5, new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), 3, new cljs.core.Keyword(null, "shanghai", "shanghai", 4561485949), 1], null), new cljs.core.Keyword(null, "magic-clothe", "magic-clothe", 788188445), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/alice/normal.png", new cljs.core.Keyword(null, "wink", "wink", 1017553793), "img/chara/alice/wink.png", 
 new cljs.core.Keyword(null, "akire", "akire", 1106777956), "img/chara/alice/akire.png", new cljs.core.Keyword(null, "odoroki", "odoroki", 3711497223), "img/chara/alice/odoroki.png", new cljs.core.Keyword(null, "naki", "naki", 1017277891), "img/chara/alice/naki.png", new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), "img/chara/alice/ikari.png", new cljs.core.Keyword(null, "warai", "warai", 1126805634), "img/chara/alice/warai.png"], null)), new cljs.core.Keyword(null, "reimu", "reimu", 1122298928), 
 touhou_barrage_fighters.data.__GT_Character.call(null, touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u535a\u9e97\u795e\u793e\u306e\u5deb\u5973\u3001\u535a\u9e97\u970a\u5922\u3088\u3002\u307e\u3041\u3088\u308d\u3057\u304f\u306d\u3002"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u304a\u8336\u3092\u5165\u308c\u3066\u304f\u308c\u308b\u306e\uff1f\u6c17\u304c\u5229\u304f\u308f\u306d\u3001\u3042\u308a\u304c\u3068\u3046\u3002", 
 "\u5deb\u5973\u306b\u898b\u3048\u306a\u3044\u3063\u3066\uff1f\u305d\u3093\u306a\u4e8b\u3069\u3046\u3067\u3082\u3044\u3044\u3058\u3083\u306a\u3044\u306e", "\u3053\u3093\u306a\u306b\u5929\u6c17\u304c\u826f\u3044\u3063\u3066\u3044\u3046\u306e\u306b\u53c2\u62dd\u5ba2\u306e\u4e00\u4eba\u3082\u5c45\u306a\u3044\u308f\u306d\u3001\u30a2\u30f3\u30bf\u3001\u6687\u306a\u3089\u3061\u3087\u3063\u3068\u52e7\u8a98\u3057\u3066\u6765\u306a\u3055\u3044\u3088"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, 
 ["\u3044\u3044\u52a0\u6e1b\u306b\u3057\u306a\u3055\u3044\uff01", "\u5012\u308c\u306a\u3055\u3044\uff01", "\u3053\u308c\u3067\u7d42\u308f\u308a\u306d"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u75db\u3044\u308f\u306d\uff01", "\u8a31\u3055\u306a\u3044\u308f\u3088\uff01", "\u304a\u7078\u304c\u5fc5\u8981\u306d\uff01"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u547c\u3093\u3060\u304b\u3057\u3089\uff1f", 
-"\u4f55\uff1f\u3057\u3064\u3053\u3044\u308f\u306d", "\u2026\u9000\u6cbb\u304c\u5fc5\u8981\u306a\u3088\u3046\u306d"], null)), 300, 45, 45, 45, 45, new cljs.core.Keyword(null, "human", "human", 1113543839), new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), 10, new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), 10, new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), 5, new cljs.core.Keyword(null, "barrage-big", 
+"\u4f55\uff1f\u3057\u3064\u3053\u3044\u308f\u306d", "\u2026\u9000\u6cbb\u304c\u5fc5\u8981\u306a\u3088\u3046\u306d"], null)), 10, 3, 3, 3, 3, new cljs.core.Keyword(null, "human", "human", 1113543839), new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), 10, new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), 10, new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), 5, new cljs.core.Keyword(null, "barrage-big", 
 "barrage-big", 3576920837), 3, new cljs.core.Keyword(null, "shanghai", "shanghai", 4561485949), 1], null), new cljs.core.Keyword(null, "human-clothe", "human-clothe", 950183325), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/reimu/normal.png", new cljs.core.Keyword(null, "kane", "kane", 1017188607), "img/chara/reimu/kane.png", new cljs.core.Keyword(null, "akire", "akire", 1106777956), "img/chara/reimu/akire.png", new cljs.core.Keyword(null, 
 "odoroki", "odoroki", 3711497223), "img/chara/reimu/odoroki.png", new cljs.core.Keyword(null, "naki", "naki", 1017277891), "img/chara/reimu/naki.png", new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), "img/chara/reimu/ikari.png", new cljs.core.Keyword(null, "egao", "egao", 1017015234), "img/chara/reimu/egao.png"], null))], null);
 touhou_barrage_fighters.debug = {};
@@ -19398,6 +19366,9 @@ touhou_barrage_fighters.storage.load = function() {
 goog.exportSymbol("touhou_barrage_fighters.storage.load", touhou_barrage_fighters.storage.load);
 touhou_barrage_fighters.battle = {};
 touhou_barrage_fighters.core = {};
+touhou_barrage_fighters.core.in_map = function() {
+  return dommy.core.replace_BANG_.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("root"))[0], touhou_barrage_fighters.ui.in_map.call(null));
+};
 touhou_barrage_fighters.core.tutorial_win = function() {
   return dommy.core.replace_BANG_.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("root"))[0], touhou_barrage_fighters.ui.tutorial.call(null));
 };
@@ -19417,6 +19388,7 @@ touhou_barrage_fighters.core.in_temple_win = function() {
   });
   return dommy.core.listen_BANG_.call(null, document.getElementById("start"), new cljs.core.Keyword(null, "click", "click", 1108654330), function() {
     touhou_barrage_fighters.ui.close_shutter_BANG_.call(null);
+    touhou_barrage_fighters.core.in_map.call(null);
     return window.setTimeout(touhou_barrage_fighters.ui.open_shutter_BANG_, 2E3);
   });
 };
@@ -19429,7 +19401,7 @@ touhou_barrage_fighters.core.init_player = function() {
 };
 goog.exportSymbol("touhou_barrage_fighters.core.init_player", touhou_barrage_fighters.core.init_player);
 touhou_barrage_fighters.core.main = function() {
-  return cljs.core.not_EQ_.call(null, "", document.cookie) ? (touhou_barrage_fighters.storage.load.call(null), touhou_barrage_fighters.core.in_temple_win.call(null)) : dommy.core.replace_BANG_.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("root"))[0], touhou_barrage_fighters.ui.init_acount.call(null));
+  return cljs.core.truth_(goog.net.cookies.get("player")) ? (touhou_barrage_fighters.storage.load.call(null), touhou_barrage_fighters.core.in_temple_win.call(null)) : dommy.core.replace_BANG_.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("root"))[0], touhou_barrage_fighters.ui.init_acount.call(null));
 };
 cljs.core._STAR_print_fn_STAR_ = function(a) {
   return console.log(a);

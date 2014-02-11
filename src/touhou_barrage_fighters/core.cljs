@@ -1,42 +1,48 @@
 (ns touhou-barrage-fighters.core
-  (:use [touhou-barrage-fighters.data :only [characters player ->Player say]]
-        [touhou-barrage-fighters.debug :only [print-chara]]
-        [touhou-barrage-fighters.ui :only [init-acount in-temple tutorial say! close-shutter! open-shutter! behave!]])
+  (:use [touhou-barrage-fighters.data :only [characters player ->Player]]
+        [touhou-barrage-fighters.debug :only [print-chara]])
   (:use-macros [dommy.macros :only [sel1]])
   (:require [touhou-barrage-fighters.storage :as st]
             [dommy.core :as dommy]
+            [touhou-barrage-fighters.ui :as ui]
             [goog.net.cookies :as cks]))
+
+(defn in-map
+  "出撃先を決定する"
+  []
+  (dommy/replace! (sel1 :.root) (ui/in-map)))
 
 (defn ^:export tutorial-win
   []
-  (dommy/replace! (sel1 :.root) (tutorial)))
+  (dommy/replace! (sel1 :.root) (ui/tutorial)))
 
 (defn ^:export in-temple-win
   []
   ; 画面を神社に
-  (dommy/replace! (sel1 :.root) (in-temple @player))
+  (dommy/replace! (sel1 :.root) (ui/in-temple @player))
   ; 台詞の設定
-  (say! (-> @player :member first) :in-temple)
+  (ui/say! (-> @player :member first) :in-temple)
   (.setInterval js/window
-    #(say! (-> @player :member first) :in-temple)
+    #(ui/say! (-> @player :member first) :in-temple)
     10000)
   ; キャラクターの設定
   (dommy/listen! (sel1 :#tatie)
     :click
     #(do
       ; キャラクターの画像変更
-      (behave! (-> @player :member first) :ikari)
-      (say! (-> @player :member first) :selected)
+      (ui/behave! (-> @player :member first) :ikari)
+      (ui/say! (-> @player :member first) :selected)
       (.setTimeout js/window
-        (fn [] (behave! (-> @player :member first) :normal))
+        (fn [] (ui/behave! (-> @player :member first) :normal))
         4000)))
   ; 出発ボタンの設定
   (dommy/listen! (sel1 :#start)
     :click
     #(do
-      (close-shutter!)
+      (ui/close-shutter!)
+      (in-map)
       (.setTimeout js/window
-        open-shutter!
+        ui/open-shutter!
         2000))))
 
 (defn ^:export init-player
@@ -51,13 +57,13 @@
 (defn main 
   []
   ; ユーザー登録
-  (if (not= "" (. js/document -cookie))
+  (if (cks/get "player")
     ; ゲームスタート
     (do
       (st/load)
       (in-temple-win))
     ; set signup ui
-    (dommy/replace! (sel1 :.root) (init-acount))))
+    (dommy/replace! (sel1 :.root) (ui/init-acount))))
 
 (set! *print-fn* #(.log js/console %))
 (set! (.-onload js/window) main)

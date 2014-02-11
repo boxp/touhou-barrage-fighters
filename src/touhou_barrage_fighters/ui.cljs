@@ -3,6 +3,12 @@
             [goog.fx.dom :as fxdom])
   (:use-macros [dommy.macros :only [deftemplate sel1]]))
 
+(deftemplate in-map []
+  [:div#map-wrapper.root
+    [:div#map-list
+      [:div "妖怪退治"]
+      [:div "紅い妖霧の謎"]]])
+
 (deftemplate init-acount []
   [:div#form-wrapper.root
     [:div#form       
