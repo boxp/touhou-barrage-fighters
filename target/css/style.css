@@ -2,6 +2,7 @@ body {
   background-color: black;
   height: 100%;
   width: 100%;
+  margin: 0;
 }
 
 img#serihu {
@@ -119,13 +120,14 @@ div#tutorial-lbl {
 
 div#character {
   margin-left: auto;
+  height: 80%;
   width: 100%;
 }
 
 img#tatie {
   margin-top: auto;
   bottom: 0;
-  width: 60%;
+  height: 100%;
 }
 
 div#serihu-wrapper {
