@@ -1,6 +1,4 @@
-(ns touhou-barrage-fighters.data
-  (:use-macros [dommy.macros :only [sel]]))
-
+(ns touhou-barrage-fighters.data)
 
 ; player parameter
 (def player (atom nil))
@@ -19,55 +17,19 @@
 
 ; equipments table
 (def equipments
-  {:magic-clothe (->Equipment "魔法使いの服" 10 30 "魔力を通しにくい素材で出来た特殊な服、夏は少し暑い。")
-   :human-clothe (->Equipment "普通の服" 10 10 "幻想郷の呉服店にある安価な服、風通しの良い素材で出来ている。")})
+  {:magic-clothe (->Equipment "魔法使いの服" 0 2 "魔力を通しにくい素材で出来た特殊な服、夏は少し暑い。")
+   :human-clothe (->Equipment "普通の服" 1 1 "幻想郷の呉服店にある安価な服、風通しの良い素材で出来ている。")})
 
 ; spell cards table
 (def spells
-  {:reigeki (->Spell "霊撃" 10 10 "使用者の周りに衝撃はを放つ、敵との間合いを使う時に役立つ。")
-   :barrage-mini (->Spell "弾幕(小)" 30 30 "小さい弾を乱れ撃つ、当たると凄く痛い。")
-   :barrage-mid (->Spell "弾幕(中)" 50 50 "丸い大きな弾を乱れ撃つ、見かけによらず当たるともの凄く痛い。")
-   :barrage-big (->Spell "弾幕(大)" 80 80 "人がすっぽり埋まる大きさの弾を乱れ撃つ、慈悲はない。")
+  {:reigeki (->Spell "霊撃" 1 1 "使用者の周りに衝撃はを放つ、敵との間合いを使う時に役立つ。")
+   :barrage-mini (->Spell "弾幕(小)" 2 2 "小さい弾を乱れ撃つ、当たると凄く痛い。")
+   :barrage-mid (->Spell "弾幕(中)" 3 3 "丸い大きな弾を乱れ撃つ、見かけによらず当たるともの凄く痛い。")
+   :barrage-big (->Spell "弾幕(大)" 5 5 "人がすっぽり埋まる大きさの弾を乱れ撃つ、慈悲はない。")
    :shanghai (->Spell "上海人形" 130 0 "二本の槍を手に持った人形を懐から取り出す、赤いリボンがチャームポイント。使用者の霊力が消えるまで留まり続ける。")})
 
-(defprotocol SpellCardBattler
-  (say [this genre])
-  (grow [this get-exp])
-  (attack [this target spell-key]))
-
 ; character main record
-(defrecord Character [words hp p-attack m-attack p-defence m-defence job cards equipment level exp img] 
-  SpellCardBattler
-  (say [this genre]
-    (set! (.-innerHTML (sel :#serihu))
-      (rand-nth (genre (:words this)))))
-  (grow [this get-exp]
-    (let [level-flag (.pow js/math (:level this))]
-      (set! (.-exp this) (+ (:exp this) get-exp))
-      (if (> (+ (:exp this) get-exp) level-flag)
-        (do 
-          (set! (.-level this) (inc (:level this)))
-          this))))
-  (attack [this target spell-key]
-    (let [spell (get spells spell-key)
-          p-damage (- 
-                     (+ (:p-attack spell) (:p-attack this)) 
-                     (:p-defence target))
-          m-damage (- (+ (:m-attack spell) (:m-attack this)) 
-                     (:m-defence target))
-          damage (.floor js/math
-                   (rand
-                     (max 
-                       p-damage
-                       m-damage)))]
-      (if (> damage 0)
-        (do
-          (set! (-> target .-hp) 
-            (if (> damage (-> target :hp)) 
-              0
-              (- (-> target .-hp) damage)))
-          target)
-        target))))
+(defrecord Character [words hp p-attack m-attack p-defence m-defence job cards equipment level exp img])
 
 ; characters table
 (def characters
@@ -85,11 +47,11 @@
               ["何か用かしら？"
                "人の事じろじろ見て、どういうつもり？"
                "刺すわよ"])
-            300
-            30
-            60
-            30
-            60
+            10
+            2
+            4
+            2
+            4
             :witch
             {:reigeki 10
              :barrage-mini 10
@@ -121,11 +83,11 @@
               ["呼んだかしら？"
                "何？しつこいわね"
                "…退治が必要なようね"])
-              300
-              45
-              45
-              45
-              45
+              10
+              3
+              3
+              3
+              3
               :human
               {:reigeki 10
                :barrage-mini 10

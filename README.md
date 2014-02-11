@@ -1,27 +1,26 @@
 # touhou-barrage-fighters
 
-  Lisp¤Î½ñÀÒLand of Lisp¤ËÅĞ¾ì¤·¤¿¡Ö¥ª¡¼¥¯¡¦¥Ğ¥È¥ë¡×¤òÈ¯Å¸¤µ¤»¤¿¥Ö¥é¥¦¥¶¥²¡¼¥à¤Ç¤¹¡£
-  ´ÏÂâ¤ò½¸¤Ş¤ë¥²¡¼¥à¤Ã¤İ¤¤Í×ÁÇ¤âÂô»³´Ş¤ó¤Ç¤½¤¦¤Ç¤¹¤¬¡¢Éİ¤¤¤Î¤Ç¤¢¤ó¤Ş¤ê¿¨¤ì¤Ş¤»¤ó¡£
-  ÅìÊıProject¤Î¥­¥ã¥é¥¯¥¿¡¼¤¬¡¢¤æ¤ë¡Á¤¤´¶¤¸¤ÇÍÅ²øÂà¼£¤ò¿Ê¤á¤Æ¹Ô¤­¤Ş¤¹¡£
+  Lispã®æ›¸ç±Land of Lispã«ç™»å ´ã—ãŸã€Œã‚ªãƒ¼ã‚¯ãƒ»ãƒãƒˆãƒ«ã€ã‚’ç™ºå±•ã•ã›ãŸãƒ–ãƒ©ã‚¦ã‚¶ã‚²ãƒ¼ãƒ ã§ã™ã€‚
+  è‰¦éšŠã‚’é›†ã¾ã‚‹ã‚²ãƒ¼ãƒ ã£ã½ã„è¦ç´ ã‚‚æ²¢å±±å«ã‚“ã§ãã†ã§ã™ãŒã€æ€–ã„ã®ã§ã‚ã‚“ã¾ã‚Šè§¦ã‚Œã¾ã›ã‚“ã€‚
+  æ±æ–¹Projectã®ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ãŒã€ã‚†ã‚‹ï½ã„æ„Ÿã˜ã§å¦–æ€ªé€€æ²»ã‚’é€²ã‚ã¦è¡Œãã¾ã™ã€‚
 
 ## Usage
 
-
 ## License
 
-Copyright ¢í 2014 BOXP
+Copyright Â© 2014 BOXP
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
 
-### ÇîÎï¿À¼Ò¡¦ÇØ·ÊÁÇºà
+### åšéº—ç¥ç¤¾ãƒ»èƒŒæ™¯ç´ æ
 
-Copyright ¢í È¬È¨
+Copyright Â© å…«å¹¡
 
 [Original link](http://www.pixiv.net/member_illust.php?mode=medium&illust_id=23859610)
 
-### ÅìÊı¼«ºîÎ©¤Á³¨
+### æ±æ–¹è‡ªä½œç«‹ã¡çµµ
 
-Copyright ¢í kaoru
+Copyright Â© kaoru
 
 [HP](http://gensoukyou.1000.tv/kiyaku.html)
