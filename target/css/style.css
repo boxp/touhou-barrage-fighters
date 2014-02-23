@@ -12,86 +12,102 @@ img#serihu {
   -ms-user-select: none; /* IE10かららしい */
 }
 
-div#wrapper {
+#wrapper {
   width: 900px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   background-image: url("../img/stage/hakurei_temple.jpg");
 }
 
-div#sidebar {
+#sidebar {
   float: left;
   width: 30%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
+  position: absolute;
 }
 
-div#info {
+#info {
   background-color: rgba(0,0,0,0.5);
   color: white;
   height: 20%;
 }
 
-div#content {
+.content {
   color: black;
   height: 100%;
-  width: 70%;
   margin-left: auto;
+  transition: width 0.6s, opacity 0.3s;
+  left: 30%;
+  position: absolute;
+  width: 0%;
+  opacity: 0;
 }
 
-div.sidebar-banner {
+.current {
+  width: 70%;
+  opacity: 1;
+}
+
+#temple-content {
+  height: 100%;
+}
+
+.sidebar-banner {
   font-size: 2em; 
-  padding: 10px;
+  padding: 10px 0;
   color: white;
+  width: 100%;
+  position: relative;
 }
 
-div.sidebar-banner:hover {
+.sidebar-banner:hover {
   font-size: 2em; 
-  padding: 10px;
   color: white;
   background-color: rgba(200,200,200,0.3);
 }
 
-div#form-wrapper {
+#form-wrapper {
   width: 50%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-div#form {
+#form {
   height: 30%;
   width: 30%;
   margin-left: auto;
   margin-right: auto;
 }
 
-div#player-name,div#player-pass {
+#player-name,#player-pass {
   color: white;
 }
 
-p#name-lbl,p#pass-lbl {
+#name-lbl,#pass-lbl {
   color: white;
 }
 
-input#game-start {
+#game-start {
   margin: 10px 0 0 0;
 }
 
-div#message-button-wrapper {
+#message-button-wrapper {
   width:30%;
   margin-left: auto;
   margin-right: auto;
 }
 
-div#pos-button {
+#pos-button {
   width: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
-div#message-wrapper {
+#message-wrapper {
   height: 100%;
   width: 70%;
   background-color: rgba(0,0,0,0.5);
@@ -99,7 +115,7 @@ div#message-wrapper {
   margin-right: auto;
 }
 
-div#message {
+#message {
   height: 70%;
   width: 100%;
   overflow-y: scroll;
@@ -109,7 +125,7 @@ div#message {
   color: white;
 }
 
-div#tutorial-lbl {
+#tutorial-lbl {
   padding: 30px;
   width: 200px;
   margin-left: auto;
@@ -118,25 +134,25 @@ div#tutorial-lbl {
   font-size: 3em;
 }
 
-div#character {
+#character {
   margin-left: auto;
   height: 80%;
   width: 100%;
 }
 
-img#tatie {
+#tatie {
   margin-top: auto;
   bottom: 0;
   height: 100%;
 }
 
-div#serihu-wrapper {
+#serihu-wrapper {
   float: right;
   width: 40%;
   position: relative;
 }
 
-img#hukidasi {
+#hukidasi {
   width: 100%;
   position: relative;
 }
@@ -149,7 +165,7 @@ div#serihu {
   bottom: 10%;
 }
 
-div#shutter {
+#shutter {
   top: 0;
   margin: 0;
   position:absolute;
@@ -159,16 +175,9 @@ div#shutter {
   background-repeat: repeat;
 }
 
-div#map-wrapper {
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/stage/hakurei_temple.jpg");
+#map-list {
 }
 
-div#map-list {
-  margin: 50px;
-}
-
-div#map-list > div {
+#map-list > div {
   
 }

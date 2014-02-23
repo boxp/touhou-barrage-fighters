@@ -2,25 +2,24 @@
   (:use [touhou-barrage-fighters.data :only [->Word ->Player ->Character player]])
   (:require [goog.net.cookies :as cks]))
 
-(defn character->js
+(defn character-rec->map
   [chara]
-  (clj->js
-    {:words {:get (-> chara :words :get)
-             :in-temple (-> chara :words :in-temple)
-             :attack (-> chara :words :attack)
-             :damage (-> chara :words :damage)
-             :selected (-> chara :words :selected)}
-     :hp (-> chara :hp)
-     :p-attack (-> chara :p-attack)
-     :m-attack (-> chara :m-attack)
-     :p-defence (-> chara :p-defence)
-     :m-defence (-> chara :m-defence)
-     :job (:job chara)
-     :cards (:cards chara)
-     :equipment (:equipment chara)
-     :level (:level chara)
-     :exp (:exp chara)
-     :img (:img chara)}))
+  {:words {:get (-> chara :words :get)
+           :in-temple (-> chara :words :in-temple)
+           :attack (-> chara :words :attack)
+           :damage (-> chara :words :damage)
+           :selected (-> chara :words :selected)}
+   :hp (-> chara :hp)
+   :p-attack (-> chara :p-attack)
+   :m-attack (-> chara :m-attack)
+   :p-defence (-> chara :p-defence)
+   :m-defence (-> chara :m-defence)
+   :job (:job chara)
+   :cards (:cards chara)
+   :equipment (:equipment chara)
+   :level (:level chara)
+   :exp (:exp chara)
+   :img (:img chara)})
 
 (defn character-repair
   [chara]
@@ -46,7 +45,7 @@
 (defn ^:export save 
   [player]
   "プレイヤーデータをセーブ"
-  (let [member (map character->js (:member player))
+  (let [member (map character-rec->map (:member player))
         cards (clj->js (:cards player))]
     (cks/set "player"
       (js/escape
@@ -69,4 +68,4 @@
         lv (player-map :lv)
         cards (player-map :cards)
         main (player-map :main)]
-    (reset! player (->Player name pass lv cards member main))))
+    (->Player name pass lv cards member main)))

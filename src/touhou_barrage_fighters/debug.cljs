@@ -19,3 +19,9 @@
     "ダメージを受けた時のセリフ\n" (join (-> chara :words :damage) "\n") "\n"
     "選択された時のセリフ\n" (join (-> chara :words :selected) "\n") "\n"
     "手持ちのスペルカード\n" (:cards chara)))
+
+(defn ^:export character-add!
+  [chara]
+  (let [chara-key (keyword chara)
+        new-chara (chara-key data/characters)]
+    (set! (. @data/player -member) (conj (:member @data/player) new-chara))))

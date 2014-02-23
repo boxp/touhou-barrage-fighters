@@ -3,11 +3,20 @@
             [goog.fx.dom :as fxdom])
   (:use-macros [dommy.macros :only [deftemplate sel1]]))
 
-(deftemplate in-map []
-  [:div#map-wrapper.root
+(deftemplate in-map [player]
+  [:div#map.content
     [:div#map-list
       [:div "妖怪退治"]
       [:div "紅い妖霧の謎"]]])
+
+(deftemplate temple [player]
+  [:div#temple-content.content
+    [:div#info (str "id: " (:name player))]
+    [:div#character
+      [:img#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
+      [:div#serihu-wrapper
+        [:img#hukidasi {:src "img/chara/hukidasi.png"}]
+        [:div#serihu]]]])
 
 (deftemplate init-acount []
   [:div#form-wrapper.root
@@ -17,8 +26,7 @@
       [:p#pass-lbl "パスワード:"]
       [:input#player-pass]
       [:input#game-start {:type "button"
-                          :value "スタート"
-                          :onClick "touhou_barrage_fighters.core.init_player();"}]]])
+                          :value "スタート"}]]])
   
 (deftemplate in-temple [player]
   [:div#wrapper.root
@@ -27,13 +35,22 @@
       [:div#customize.sidebar-banner "カスタマイズ"]
       [:div#rest.sidebar-banner "休憩所"]
       [:div#start.sidebar-banner "出発"]]
-    [:div#content 
+    [:div#temple-content.content.current {:name "temple-content"}
       [:div#info (str "id: " (:name player))]
       [:div#character
         [:img#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
         [:div#serihu-wrapper
           [:img#hukidasi {:src "img/chara/hukidasi.png"}]
-          [:div#serihu]]]]])
+          [:div#serihu]]]]
+    [:div#map.content {:name "map"}
+      [:div#map-list
+        [:div "妖怪退治"]
+        [:div "紅い妖霧の謎"]]]])
+
+(defn switch-content 
+  [id]
+  (dommy/remove-class! (sel1 :.current) :current)
+  (dommy/add-class! (sel1 id) :current))
 
 (deftemplate tutorial []
   [:div#tutorial-wrapper.root
@@ -46,8 +63,7 @@
          "人類が滅びない為にも、 神社で気持ちよさそうに寝ている巫女を叩き起こし、共に妖怪退治の旅に出かけましょう！"]
       [:input#pos-button 
         {:type "button"
-         :value "OK"
-         :onClick "touhou_barrage_fighters.core.in_temple_win();"}]]])
+         :value "OK"}]]])
 
 (defn say!
   [chara genre]

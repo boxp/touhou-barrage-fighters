@@ -1,8 +1,5 @@
 (ns touhou-barrage-fighters.data)
 
-; player parameter
-(def player (atom nil))
-
 ; player record
 (defrecord Player [name pass lv cards member main])
 
