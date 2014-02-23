@@ -1,6 +1,9 @@
 (ns touhou-barrage-fighters.debug
-  (:require [touhou-barrage-fighters.data :as data])
-  (:use [clojure.string :only [join]]))
+  (:require [touhou-barrage-fighters.data :as data]
+            [cljs.core.async :refer [<!]]
+            [touhou-barrage-fighters.battle :as bt]
+            [clojure.string :refer [join]])
+  (:use-macros [cljs.core.async.macros :only [go]]))
 
 (defn print-chara
   "print character parameter"
@@ -25,3 +28,11 @@
   (let [chara-key (keyword chara)
         new-chara (chara-key data/characters)]
     (set! (. @data/player -member) (conj (:member @data/player) new-chara))))
+
+(defn battle-test
+  []
+  (go (let [player (:alice data/characters)
+            enemy (:reimu data/characters)
+            result (<! (bt/battle-loop :lake player enemy))]
+          (js/alert "プレーヤー: " (:player result) "\n"
+                    "エネミー： " (:enemy result) "\n"))))

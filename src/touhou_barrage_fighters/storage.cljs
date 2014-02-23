@@ -1,5 +1,5 @@
 (ns touhou-barrage-fighters.storage
-  (:use [touhou-barrage-fighters.data :only [->Word ->Player ->Character player]])
+  (:use [touhou-barrage-fighters.data :only [->Word ->Player ->Character]])
   (:require [goog.net.cookies :as cks]))
 
 (defn character-rec->map

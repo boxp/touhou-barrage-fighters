@@ -1,5 +1,5 @@
 (ns touhou-barrage-fighters.core
-  (:use [touhou-barrage-fighters.data :only [characters player ->Player]]
+  (:use [touhou-barrage-fighters.data :only [->Player]]
         [touhou-barrage-fighters.debug :only [print-chara]]
         [cljs.core.async :only [<! put! timeout chan]])
   (:use-macros [dommy.macros :only [sel1 sel]]
@@ -48,8 +48,10 @@
     ; 画面を神社に
     (dommy/replace! (sel1 :.root) (ui/in-temple player))
     (dommy/listen! (sel1 :#temple) 
-                   :click
-    (character-loop chara-chan (-> player :member first)))))
+                   :click #(ui/switch-content :#temple-content))
+    (dommy/listen! (sel1 :#start)
+                   :click #(ui/switch-content :#map))
+    (character-loop chara-chan (-> player :member first))))
 
 (defn ^:export init-player
   []

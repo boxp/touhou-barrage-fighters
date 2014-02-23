@@ -176,8 +176,11 @@ div#serihu {
 }
 
 #map-list {
+  margin: 10%;
+  list-style: none;
 }
 
-#map-list > div {
-  
+#map-list > li {
+  float: left;
+  margin: 10px;
 }

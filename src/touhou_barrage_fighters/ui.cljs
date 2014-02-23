@@ -1,13 +1,15 @@
 (ns touhou-barrage-fighters.ui
   (:require [dommy.core :as dommy]
-            [goog.fx.dom :as fxdom])
-  (:use-macros [dommy.macros :only [deftemplate sel1]]))
+            [goog.fx.dom :as fxdom]
+            [cljs.core.async :refer [<! timeout put!]])
+  (:use-macros [dommy.macros :only [deftemplate sel1]]
+               [cljs.core.async.macros :only [go]]))
 
 (deftemplate in-map [player]
   [:div#map.content
     [:div#map-list
-      [:div "妖怪退治"]
-      [:div "紅い妖霧の謎"]]])
+      [:div#youkai-taiji "妖怪退治"]
+      [:div#akai-koumu "紅い妖霧の謎"]]])
 
 (deftemplate temple [player]
   [:div#temple-content.content
@@ -43,9 +45,15 @@
           [:img#hukidasi {:src "img/chara/hukidasi.png"}]
           [:div#serihu]]]]
     [:div#map.content {:name "map"}
-      [:div#map-list
-        [:div "妖怪退治"]
-        [:div "紅い妖霧の謎"]]]])
+      [:ul#map-list
+        [:li "妖怪退治"]
+        [:li "紅い妖霧の謎"]]]])
+
+(deftemplate battle-field
+  [field-name]
+  [:div#wrapper.root
+    [:div#content]
+    [:div#cards]])
 
 (defn switch-content 
   [id]
@@ -88,3 +96,10 @@
         max-height (.. js/document -body -clientHeight)
         resizer (fxdom/ResizeHeight. shutter max-height 0 1000)]
     (. resizer play)))
+
+(defn departure
+  [place]
+  (go (close-shutter!)
+      (<! (timeout 1000))
+      (dommy/replace! (sel1 :.root) (battle-field place))
+      (open-shutter!)))

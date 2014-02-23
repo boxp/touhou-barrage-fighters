@@ -50,11 +50,15 @@
             2
             4
             :witch
-            {:reigeki 10
-             :barrage-mini 10
-             :barrage-mid 5
-             :barrage-big 3
-             :shanghai 1}
+            [:reigeki 
+             :reigeki
+             :barrage-mini
+             :barrage-mini
+             :barrage-mid
+             :barrage-mid
+             :barrage-big
+             :barrage-big
+             :shanghai]
             :magic-clothe
             0
             0
@@ -86,11 +90,15 @@
               3
               3
               :human
-              {:reigeki 10
-               :barrage-mini 10
-               :barrage-mid 5
-               :barrage-big 3
-               :shanghai 1}
+              [:reigeki
+               :reigeki
+               :barrage-mini
+               :barrage-mini
+               :barrage-mid
+               :barrage-mid
+               :barrage-big
+               :barrage-big
+               :shanghai]
               :human-clothe
               0
               0
