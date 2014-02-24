@@ -93,5 +93,5 @@
           (player-loop player-chan))
         (tutorial)))))
 
-(set! *print-fn* #(.log js/console %))
+(set! *print-fn* #(.log js/console %&))
 (set! (.-onload js/window) main)

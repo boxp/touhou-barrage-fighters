@@ -1,5 +1,6 @@
 (ns touhou-barrage-fighters.battle
   (:require [cljs.core.async :refer [<! put! timeout]]
+            [cljs.core.walk :refer [prewalk]]
             [touhou-barrage-fighters.data :as dt])
   (:use-macros [cljs.core.async.macros :only [go-loop]]))
 
@@ -11,6 +12,10 @@
     :ru-mia]
    [:chirno
     :daiyousei]])
+
+(defn enemy-key->record
+  [enemy-vec]
+  (prewalk #(% dt/characters) enemy-vec))
 
 (defn hit?
   [player enemy card]
@@ -111,3 +116,6 @@
                new-enemy-hp
                new-player-cards
                new-enemy-cards)))))
+
+(defn ready-for-battle
+  [player-member enemy-member])
