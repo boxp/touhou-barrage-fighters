@@ -26,11 +26,12 @@
    :shanghai (->Spell "上海人形" 130 0 "二本の槍を手に持った人形を懐から取り出す、赤いリボンがチャームポイント。使用者の霊力が消えるまで留まり続ける。")})
 
 ; character main record
-(defrecord Character [words hp p-attack m-attack p-defence m-defence job cards equipment level exp img])
+(defrecord Character [name words hp p-attack m-attack p-defence m-defence job cards equipment level exp img])
 
 ; characters table
 (def characters
   {:alice (->Character 
+            "アリス・マーガトロイド"
             (->Word 
               ["森の人形遣いアリス・マーガトロイドよ、よろしくね。"]
               ["紅茶は好きだけど、コーヒーもまた良い物ね。"
@@ -44,11 +45,11 @@
               ["何か用かしら？"
                "人の事じろじろ見て、どういうつもり？"
                "刺すわよ"])
-            10
-            2
-            4
-            2
-            4
+            100
+            20
+            40
+            20
+            40
             :witch
             [:reigeki 
              :reigeki
@@ -70,6 +71,7 @@
              :ikari "img/chara/alice/ikari.png"
              :warai "img/chara/alice/warai.png"})
    :reimu (->Character
+            "博霊 霊夢"
             (->Word
               ["博麗神社の巫女、博麗霊夢よ。まぁよろしくね。"]
               ["お茶を入れてくれるの？気が利くわね、ありがとう。"
@@ -84,11 +86,11 @@
               ["呼んだかしら？"
                "何？しつこいわね"
                "…退治が必要なようね"])
-              10
-              3
-              3
-              3
-              3
+              100
+              30
+              30
+              30
+              30
               :human
               [:reigeki
                :reigeki

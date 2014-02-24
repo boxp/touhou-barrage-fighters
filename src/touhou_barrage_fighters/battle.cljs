@@ -24,9 +24,6 @@
                      (-> dt/equipments (:equipment enemy) :m-defence))
         p-damage (- p-attack p-defence)
         m-damage (- m-attack m-defence)
-        hit (if (> p-damage m-damage)
-              (hit? p-attack p-defence)
-              (hit? m-attack m-defence))
         reacha-value (rand (if (> p-damage m-damage)
                              p-attack
                              m-attack))
@@ -42,9 +39,9 @@
         m-attack (+ (:m-attack player)
                     (:m-attack card))
         p-defence (+ (:p-defence enemy)
-                     ((:equipment enemy) dt/equipments))
+                     (-> dt/equipments (:equipment enemy) :p-defence))
         m-defence (+ (:m-defence enemy)
-                     ((:equipment enemy) dt/equipments))
+                     (-> dt/equipments (:equipment enemy) :m-defence))
         p-damage (- p-attack p-defence)
         m-damage (- m-attack m-defence)
         damage (max p-damage m-damage)]
@@ -54,6 +51,7 @@
 
 (defn battle-loop
   [place player enemy]
+  (print (:name player) "vs" (:name enemy))
   (go-loop [player-hp (:hp player)
             enemy-hp (:hp enemy)
             player-cards (:cards player)
@@ -68,11 +66,20 @@
           new-enemy-hp (- enemy-hp damage-player->enemy)
           new-player-cards (rest player-cards)
           new-enemy-cards (rest enemy-cards)]
+      (print (:name player) "の攻撃")
+      (print "スペルカード「" (:name player-card) "」")
+      (print (if hit-player->enemy "ヒット！" "外れた!"))
+      (print (:name enemy) ":残りライフ" new-enemy-hp)
+      (print (:name enemy) "の攻撃")
+      (print (if hit-player->enemy "ヒット！" "外れた!"))
+      (print "スペルカード「" (:name enemy-card) "」")
+      (print (:name player) ":残りライフ" new-player-hp)
       (if 
         (or (< new-player-hp 0)
             (< new-enemy-hp 0))
         {:player 
           (dt/->Character 
+            (:name player)
             (:words player)
             new-player-hp
             (:p-attack player)
@@ -87,6 +94,7 @@
             (:img player))
         :enemy
           (dt/->Character 
+            (:name player)
             (:words enemy)
             new-enemy-hp
             (:p-attack enemy)

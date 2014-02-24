@@ -29,10 +29,17 @@
         new-chara (chara-key data/characters)]
     (set! (. @data/player -member) (conj (:member @data/player) new-chara))))
 
-(defn battle-test
+(defn ^:export battle-test
   []
   (go (let [player (:alice data/characters)
             enemy (:reimu data/characters)
             result (<! (bt/battle-loop :lake player enemy))]
-          (js/alert "プレーヤー: " (:player result) "\n"
-                    "エネミー： " (:enemy result) "\n"))))
+    (js/alert (str (:name player) ":" (-> result :player :hp)
+                   (:name enemy) ":" (-> result :enemy :hp))))))
+
+(defn ^:export get-damage-point
+  []
+  (let [player (:alice data/characters)
+        enemy (:reimu data/characters)
+        spell (:shanghai data/spells)]
+    (bt/calc-damage-point player enemy spell)))

@@ -1,5 +1,5 @@
 (ns touhou-barrage-fighters.core
-  (:use [touhou-barrage-fighters.data :only [->Player]]
+  (:use [touhou-barrage-fighters.data :only [->Player characters]]
         [touhou-barrage-fighters.debug :only [print-chara]]
         [cljs.core.async :only [<! put! timeout chan]])
   (:use-macros [dommy.macros :only [sel1 sel]]

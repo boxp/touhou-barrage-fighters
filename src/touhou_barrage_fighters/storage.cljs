@@ -4,7 +4,8 @@
 
 (defn character-rec->map
   [chara]
-  {:words {:get (-> chara :words :get)
+  {:name (:name chara)
+   :words {:get (-> chara :words :get)
            :in-temple (-> chara :words :in-temple)
            :attack (-> chara :words :attack)
            :damage (-> chara :words :damage)
@@ -24,6 +25,7 @@
 (defn character-repair
   [chara]
   (->Character
+    (:name chara)
     (->Word
       (-> chara :words :get)
       (-> chara :words :in-temple)
