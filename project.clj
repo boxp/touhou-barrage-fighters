@@ -11,6 +11,7 @@
   :plugins [[lein-cljsbuild "1.0.1"]]
   ;clj/cljsで共有するソースコードを設定
   :crossovers [touhou-barrage-fighters.data]
+  :main touhou-barrage-fighters.core
   :source-paths ["src-clj"]
   :cljsbuild {
     :builds [{
