@@ -14,6 +14,7 @@
   :main touhou-barrage-fighters.core
   :source-paths ["src-clj"]
   :uberjar-name "touhou-barrage-fighters-standalone.jar"
+  :min-lein-version "2.0.0"
   :cljsbuild {
     :builds [{
       ;clj/cljsで共有するソースコードのパスを設定
