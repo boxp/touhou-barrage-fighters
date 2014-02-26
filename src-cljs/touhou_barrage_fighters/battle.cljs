@@ -1,14 +1,13 @@
 (ns touhou-barrage-fighters.battle
   (:require [cljs.core.async :refer [<! put! timeout]]
-            [cljs.core.walk :refer [prewalk]]
+            [clojure.walk :refer [prewalk]]
             [touhou-barrage-fighters.data :as dt])
   (:use-macros [cljs.core.async.macros :only [go-loop]]))
 
 (def youkai-taiji
-  [[:yousei
-    :yousei]
-   [:yousei
-    :yousei
+  [[:yousei1
+    :yousei2]
+   [:yousei2 :yousei3
     :ru-mia]
    [:chirno
     :daiyousei]])
@@ -118,4 +117,7 @@
                new-enemy-cards)))))
 
 (defn ready-for-battle
-  [player-member enemy-member])
+  [player-member enemy-member]
+  (go-loop [p-member player-member
+            e-member enemy-member]
+    ))

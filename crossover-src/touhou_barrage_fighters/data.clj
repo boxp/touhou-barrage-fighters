@@ -14,8 +14,9 @@
 
 ; equipments table
 (def equipments
-  {:magic-clothe (->Equipment "魔法使いの服" 0 2 "魔力を通しにくい素材で出来た特殊な服、夏は少し暑い。")
-   :human-clothe (->Equipment "普通の服" 1 1 "幻想郷の呉服店にある安価な服、風通しの良い素材で出来ている。")})
+  {:magic-clothe (->Equipment "魔法使いの服" 0 20 "魔力を通しにくい素材で出来た特殊な服、夏は少し暑い。")
+   :human-clothe (->Equipment "普通の服" 10 10 "幻想郷の呉服店にある安価な服、風通しの良い素材で出来ている。")
+   :fairy-clothe (->Equipment "妖精の服" 10 10 "妖精が元々身に着けている服、何故プレイヤーが持っているのだろう…")})
 
 ; spell cards table
 (def spells
@@ -110,4 +111,113 @@
                :odoroki "img/chara/reimu/odoroki.png"
                :naki "img/chara/reimu/naki.png"
                :ikari "img/chara/reimu/ikari.png"
-               :egao "img/chara/reimu/egao.png"})})
+               :egao "img/chara/reimu/egao.png"})
+   :yousei1 (->Character
+              "妖精A"
+              (->Word
+                ["これからよろしくね！"]
+                ["まっくの〜うち〜まっくの〜うち〜♪"
+                 "神社ってちょっと退屈するわ〜"
+                 "みんなどこに行ったのかな"]
+                ["えい！"
+                 "負けないよ！"
+                 "やらないとやられるわ…"]
+                ["げぇっ！"
+                 "痛い痛い！"
+                 "やったなぁ〜"]
+                ["なぁに？"])
+              50
+              10
+              10
+              10
+              10
+              :fairy
+              [:barrage-mini
+               :barrage-mini
+               :barrage-mini
+               :barrage-mini
+               :barrage-mid
+               :barrage-mid]
+              :fairy-clothe
+              0
+              0
+              {:normal "img/chara/yousei1/normal.png"
+               :komari "img/chara/yousei1/komari.png"
+               :akire "img/chara/yousei1/akire.png"
+               :odoroki "img/chara/yousei/odoroki.png"
+               :naki "img/chara/yousei/naki.png"
+               :ikari "img/chara/yousei/ikari.png"
+               :egao "img/chara/yousei/egao.png"})
+   :yousei2 (->Character
+              "妖精B"
+              (->Word
+                ["よろしくね〜!"]
+                ["まっくの〜うち〜まっくの〜うち〜♪"
+                 "神社ってちょっと退屈するわ〜"
+                 "みんなどこに行ったのかな"]
+                ["えい！"
+                 "負けないよ！"
+                 "やらないとやられるわ…"]
+                ["げぇっ！"
+                 "痛い痛い！"
+                 "やったなぁ〜"]
+                ["なぁに？"])
+              50
+              10
+              10
+              10
+              10
+              :fairy
+              [:barrage-mini
+               :barrage-mini
+               :barrage-mini
+               :barrage-mini
+               :barrage-mid
+               :barrage-mid]
+              :fairy-clothe
+              0
+              0
+              {:normal "img/chara/yousei2/normal.png"
+               :komari "img/chara/yousei2/itazura.png"
+               :akire "img/chara/yousei2/akire.png"
+               :odoroki "img/chara/yousei2/odoroki.png"
+               :naki "img/chara/yousei2/naki.png"
+               :ikari "img/chara/yousei2/ikari.png"
+               :egao "img/chara/yousei2/egao.png"})
+   :yousei3 (->Character
+              "妖精C"
+              (->Word
+                ["よろしくね〜!"]
+                ["まっくの〜うち〜まっくの〜うち〜♪"
+                 "神社ってちょっと退屈するわ〜"
+                 "みんなどこに行ったのかな"]
+                ["えい！"
+                 "負けないよ！"
+                 "やらないとやられるわ…"]
+                ["げぇっ！"
+                 "痛い痛い！"
+                 "やったなぁ〜"]
+                ["なぁに？"])
+              50
+              10
+              10
+              10
+              10
+              :fairy
+              [:barrage-mini
+               :barrage-mini
+               :barrage-mini
+               :barrage-mini
+               :barrage-mid
+               :barrage-mid]
+              :fairy-clothe
+              0
+              0
+              {:normal "img/chara/yousei3/normal.png"
+               :urei "img/chara/yousei3/urei.png"
+               :akire "img/chara/yousei3/akire.png"
+               :odoroki "img/chara/yousei3/odoroki.png"
+               :naki "img/chara/yousei3/naki.png"
+               :ikari "img/chara/yousei3/ikari.png"
+               :egao "img/chara/yousei3/egao.png"})
+               })

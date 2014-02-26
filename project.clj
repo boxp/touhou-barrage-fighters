@@ -6,12 +6,18 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/clojurescript "0.0-2173"]
                  [prismatic/dommy "0.1.1"]
+                 [ring/ring-jetty-adapter "1.1.6"]
                  [cljs-http "0.1.2"]]
   :plugins [[lein-cljsbuild "1.0.1"]]
+  ;clj/cljsで共有するソースコードを設定
+  :crossovers [touhou-barrage-fighters.data]
+  :source-paths ["src-clj"]
   :cljsbuild {
     :builds [{
+      ;clj/cljsで共有するソースコードのパスを設定
+      :crossover-path "crossover-src"
       ;ソースコードを配置するパス
-      :source-paths ["src/touhou_barrage_fighters"]
+      :source-paths ["src-cljs"]
       ;nodejsか標準を選択
       ;ClojureScriptコンパイラの基本オプション
       ;(ClojureScriptのドキュメントを良く見てね)
