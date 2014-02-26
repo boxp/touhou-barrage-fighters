@@ -64,13 +64,7 @@
             :magic-clothe
             0
             0
-            {:normal "img/chara/alice/normal.png"
-             :wink "img/chara/alice/wink.png"
-             :akire "img/chara/alice/akire.png"
-             :odoroki "img/chara/alice/odoroki.png"
-             :naki "img/chara/alice/naki.png"
-             :ikari "img/chara/alice/ikari.png"
-             :warai "img/chara/alice/warai.png"})
+            "img/chara/alice.png")
    :reimu (->Character
             "博霊 霊夢"
             (->Word
@@ -105,13 +99,7 @@
               :human-clothe
               0
               0
-              {:normal "img/chara/reimu/normal.png"
-               :kane "img/chara/reimu/kane.png"
-               :akire "img/chara/reimu/akire.png"
-               :odoroki "img/chara/reimu/odoroki.png"
-               :naki "img/chara/reimu/naki.png"
-               :ikari "img/chara/reimu/ikari.png"
-               :egao "img/chara/reimu/egao.png"})
+              "img/chara/reimu.png")
    :yousei1 (->Character
               "妖精A"
               (->Word
@@ -141,13 +129,7 @@
               :fairy-clothe
               0
               0
-              {:normal "img/chara/yousei1/normal.png"
-               :komari "img/chara/yousei1/komari.png"
-               :akire "img/chara/yousei1/akire.png"
-               :odoroki "img/chara/yousei/odoroki.png"
-               :naki "img/chara/yousei/naki.png"
-               :ikari "img/chara/yousei/ikari.png"
-               :egao "img/chara/yousei/egao.png"})
+              "img/chara/yousei1.png")
    :yousei2 (->Character
               "妖精B"
               (->Word
@@ -177,13 +159,7 @@
               :fairy-clothe
               0
               0
-              {:normal "img/chara/yousei2/normal.png"
-               :komari "img/chara/yousei2/itazura.png"
-               :akire "img/chara/yousei2/akire.png"
-               :odoroki "img/chara/yousei2/odoroki.png"
-               :naki "img/chara/yousei2/naki.png"
-               :ikari "img/chara/yousei2/ikari.png"
-               :egao "img/chara/yousei2/egao.png"})
+              "img/chara/yousei2.png")
    :yousei3 (->Character
               "妖精C"
               (->Word
@@ -213,11 +189,4 @@
               :fairy-clothe
               0
               0
-              {:normal "img/chara/yousei3/normal.png"
-               :urei "img/chara/yousei3/urei.png"
-               :akire "img/chara/yousei3/akire.png"
-               :odoroki "img/chara/yousei3/odoroki.png"
-               :naki "img/chara/yousei3/naki.png"
-               :ikari "img/chara/yousei3/ikari.png"
-               :egao "img/chara/yousei3/egao.png"})
-               })
+              "img/chara/yousei3.png")})

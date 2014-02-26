@@ -22431,10 +22431,11 @@ touhou_barrage_fighters.ui.temple = function(a) {
     var b = document.createElement("div");
     b.setAttribute("id", "character");
     b.appendChild(function() {
-      var b = document.createElement("img");
-      b.setAttribute("id", "tatie");
-      cljs.core.truth_((new cljs.core.Keyword(null, "normal", "normal", 4269125721)).cljs$core$IFn$_invoke$arity$1((new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a))))) && b.setAttribute("src", (new cljs.core.Keyword(null, "normal", "normal", 4269125721)).cljs$core$IFn$_invoke$arity$1((new cljs.core.Keyword(null, 
-      "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a)))));
+      var b = document.createElement("div");
+      b.className = "tatie normal";
+      cljs.core.truth_(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-image", "background-image", 1624697710), [cljs.core.str("url("), cljs.core.str((new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a)))), cljs.core.str(")")].join("")], 
+      null)) && b.setAttribute("style", dommy.core.style_str.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-image", "background-image", 1624697710), [cljs.core.str("url("), cljs.core.str((new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a)))), 
+      cljs.core.str(")")].join("")], null)));
       return b;
     }());
     b.appendChild(function() {
@@ -22549,10 +22550,12 @@ touhou_barrage_fighters.ui.in_temple = function(a) {
       var b = document.createElement("div");
       b.setAttribute("id", "character");
       b.appendChild(function() {
-        var b = document.createElement("img");
-        b.setAttribute("id", "tatie");
-        cljs.core.truth_((new cljs.core.Keyword(null, "normal", "normal", 4269125721)).cljs$core$IFn$_invoke$arity$1((new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a))))) && b.setAttribute("src", (new cljs.core.Keyword(null, "normal", "normal", 4269125721)).cljs$core$IFn$_invoke$arity$1((new cljs.core.Keyword(null, 
-        "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a)))));
+        var b = document.createElement("div");
+        b.className = "tatie normal";
+        b.setAttribute("id", "temple-tatie");
+        cljs.core.truth_(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-image", "background-image", 1624697710), [cljs.core.str("url("), cljs.core.str((new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a)))), cljs.core.str(")")].join("")], 
+        null)) && b.setAttribute("style", dommy.core.style_str.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "background-image", "background-image", 1624697710), [cljs.core.str("url("), cljs.core.str((new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(cljs.core.nth.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a), (new cljs.core.Keyword(null, "main", "main", 1017248043)).cljs$core$IFn$_invoke$arity$1(a)))), 
+        cljs.core.str(")")].join("")], null)));
         return b;
       }());
       b.appendChild(function() {
@@ -22658,8 +22661,9 @@ touhou_barrage_fighters.ui.tutorial = function() {
 touhou_barrage_fighters.ui.say_BANG_ = function(a, b) {
   return document.getElementById("serihu").innerHTML = cljs.core.rand_nth.call(null, b.call(null, (new cljs.core.Keyword(null, "words", "words", 1127222811)).cljs$core$IFn$_invoke$arity$1(a)));
 };
-touhou_barrage_fighters.ui.behave_BANG_ = function(a, b) {
-  return document.getElementById("tatie").src = b.call(null, (new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(a));
+touhou_barrage_fighters.ui.switch_behave_BANG_ = function(a, b, c) {
+  dommy.core.remove_class_BANG_.call(null, document.querySelector(dommy.core.selector.call(null, a)), b);
+  return dommy.core.add_class_BANG_.call(null, document.querySelector(dommy.core.selector.call(null, a)), c);
 };
 touhou_barrage_fighters.ui.close_shutter_BANG_ = function() {
   var a = document.getElementById("shutter");
@@ -23192,29 +23196,23 @@ null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u7518\u3044\u308f\u306d", "\u5f3e\u5e55\u306f\u30d6\u30ec\u30a4\u30f3\u3001\u5e38\u8b58\u3088", "\u3054\u3081\u3093\u306a\u3055\u3044\u3001\u5148\u3092\u6025\u3044\u3067\u3044\u308b\u306e"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u697d\u3057\u304f\u306a\u3063\u3066\u6765\u305f\u3058\u3083\u306a\u3044", "\u75db\u3044\u308f\u2026"], null), new cljs.core.PersistentVector(null, 
 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u4f55\u304b\u7528\u304b\u3057\u3089\uff1f", "\u4eba\u306e\u4e8b\u3058\u308d\u3058\u308d\u898b\u3066\u3001\u3069\u3046\u3044\u3046\u3064\u3082\u308a\uff1f", "\u523a\u3059\u308f\u3088"], null)), 100, 20, 40, 20, 40, new cljs.core.Keyword(null, "witch", "witch", 1127045945), new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), new cljs.core.Keyword(null, "reigeki", 
 "reigeki", 2101791684), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), new cljs.core.Keyword(null, "shanghai", "shanghai", 
-4561485949)], null), new cljs.core.Keyword(null, "magic-clothe", "magic-clothe", 788188445), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/alice/normal.png", new cljs.core.Keyword(null, "wink", "wink", 1017553793), "img/chara/alice/wink.png", new cljs.core.Keyword(null, "akire", "akire", 1106777956), "img/chara/alice/akire.png", new cljs.core.Keyword(null, "odoroki", "odoroki", 3711497223), "img/chara/alice/odoroki.png", new cljs.core.Keyword(null, 
-"naki", "naki", 1017277891), "img/chara/alice/naki.png", new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), "img/chara/alice/ikari.png", new cljs.core.Keyword(null, "warai", "warai", 1126805634), "img/chara/alice/warai.png"], null)), new cljs.core.Keyword(null, "reimu", "reimu", 1122298928), touhou_barrage_fighters.data.__GT_Character.call(null, "\u535a\u970a \u970a\u5922", touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, 
-["\u535a\u9e97\u795e\u793e\u306e\u5deb\u5973\u3001\u535a\u9e97\u970a\u5922\u3088\u3002\u307e\u3041\u3088\u308d\u3057\u304f\u306d\u3002"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u304a\u8336\u3092\u5165\u308c\u3066\u304f\u308c\u308b\u306e\uff1f\u6c17\u304c\u5229\u304f\u308f\u306d\u3001\u3042\u308a\u304c\u3068\u3046\u3002", "\u5deb\u5973\u306b\u898b\u3048\u306a\u3044\u3063\u3066\uff1f\u305d\u3093\u306a\u4e8b\u3069\u3046\u3067\u3082\u3044\u3044\u3058\u3083\u306a\u3044\u306e", 
-"\u3053\u3093\u306a\u306b\u5929\u6c17\u304c\u826f\u3044\u3063\u3066\u3044\u3046\u306e\u306b\u53c2\u62dd\u5ba2\u306e\u4e00\u4eba\u3082\u5c45\u306a\u3044\u308f\u306d\u3001\u30a2\u30f3\u30bf\u3001\u6687\u306a\u3089\u3061\u3087\u3063\u3068\u52e7\u8a98\u3057\u3066\u6765\u306a\u3055\u3044\u3088"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3044\u3044\u52a0\u6e1b\u306b\u3057\u306a\u3055\u3044\uff01", "\u5012\u308c\u306a\u3055\u3044\uff01", "\u3053\u308c\u3067\u7d42\u308f\u308a\u306d"], 
-null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u75db\u3044\u308f\u306d\uff01", "\u8a31\u3055\u306a\u3044\u308f\u3088\uff01", "\u304a\u7078\u304c\u5fc5\u8981\u306d\uff01"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u547c\u3093\u3060\u304b\u3057\u3089\uff1f", "\u4f55\uff1f\u3057\u3064\u3053\u3044\u308f\u306d", "\u2026\u9000\u6cbb\u304c\u5fc5\u8981\u306a\u3088\u3046\u306d"], null)), 100, 30, 30, 30, 30, new cljs.core.Keyword(null, 
-"human", "human", 1113543839), new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 
-3576931405), new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), new cljs.core.Keyword(null, "shanghai", "shanghai", 4561485949)], null), new cljs.core.Keyword(null, "human-clothe", "human-clothe", 950183325), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/reimu/normal.png", new cljs.core.Keyword(null, "kane", "kane", 1017188607), "img/chara/reimu/kane.png", 
-new cljs.core.Keyword(null, "akire", "akire", 1106777956), "img/chara/reimu/akire.png", new cljs.core.Keyword(null, "odoroki", "odoroki", 3711497223), "img/chara/reimu/odoroki.png", new cljs.core.Keyword(null, "naki", "naki", 1017277891), "img/chara/reimu/naki.png", new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), "img/chara/reimu/ikari.png", new cljs.core.Keyword(null, "egao", "egao", 1017015234), "img/chara/reimu/egao.png"], null)), new cljs.core.Keyword(null, "yousei1", "yousei1", 4317081291), 
-touhou_barrage_fighters.data.__GT_Character.call(null, "\u5996\u7cbeA", touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3053\u308c\u304b\u3089\u3088\u308d\u3057\u304f\u306d\uff01"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u266a", "\u795e\u793e\u3063\u3066\u3061\u3087\u3063\u3068\u9000\u5c48\u3059\u308b\u308f\u301c", 
-"\u307f\u3093\u306a\u3069\u3053\u306b\u884c\u3063\u305f\u306e\u304b\u306a"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3048\u3044\uff01", "\u8ca0\u3051\u306a\u3044\u3088\uff01", "\u3084\u3089\u306a\u3044\u3068\u3084\u3089\u308c\u308b\u308f\u2026"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3052\u3047\u3063\uff01", "\u75db\u3044\u75db\u3044\uff01", "\u3084\u3063\u305f\u306a\u3041\u301c"], null), new cljs.core.PersistentVector(null, 
-1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u306a\u3041\u306b\uff1f"], null)), 50, 10, 10, 10, 10, new cljs.core.Keyword(null, "fairy", "fairy", 1111097671), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", 
-"barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405)], null), new cljs.core.Keyword(null, "fairy-clothe", "fairy-clothe", 4386450421), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/yousei1/normal.png", new cljs.core.Keyword(null, "komari", "komari", 4183078305), "img/chara/yousei1/komari.png", new cljs.core.Keyword(null, 
-"akire", "akire", 1106777956), "img/chara/yousei1/akire.png", new cljs.core.Keyword(null, "odoroki", "odoroki", 3711497223), "img/chara/yousei/odoroki.png", new cljs.core.Keyword(null, "naki", "naki", 1017277891), "img/chara/yousei/naki.png", new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), "img/chara/yousei/ikari.png", new cljs.core.Keyword(null, "egao", "egao", 1017015234), "img/chara/yousei/egao.png"], null)), new cljs.core.Keyword(null, "yousei2", "yousei2", 4317081292), touhou_barrage_fighters.data.__GT_Character.call(null, 
-"\u5996\u7cbeB", touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3088\u308d\u3057\u304f\u306d\u301c!"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u266a", "\u795e\u793e\u3063\u3066\u3061\u3087\u3063\u3068\u9000\u5c48\u3059\u308b\u308f\u301c", "\u307f\u3093\u306a\u3069\u3053\u306b\u884c\u3063\u305f\u306e\u304b\u306a"], 
+4561485949)], null), new cljs.core.Keyword(null, "magic-clothe", "magic-clothe", 788188445), 0, 0, "img/chara/alice.png"), new cljs.core.Keyword(null, "reimu", "reimu", 1122298928), touhou_barrage_fighters.data.__GT_Character.call(null, "\u535a\u970a \u970a\u5922", touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u535a\u9e97\u795e\u793e\u306e\u5deb\u5973\u3001\u535a\u9e97\u970a\u5922\u3088\u3002\u307e\u3041\u3088\u308d\u3057\u304f\u306d\u3002"], 
+null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u304a\u8336\u3092\u5165\u308c\u3066\u304f\u308c\u308b\u306e\uff1f\u6c17\u304c\u5229\u304f\u308f\u306d\u3001\u3042\u308a\u304c\u3068\u3046\u3002", "\u5deb\u5973\u306b\u898b\u3048\u306a\u3044\u3063\u3066\uff1f\u305d\u3093\u306a\u4e8b\u3069\u3046\u3067\u3082\u3044\u3044\u3058\u3083\u306a\u3044\u306e", "\u3053\u3093\u306a\u306b\u5929\u6c17\u304c\u826f\u3044\u3063\u3066\u3044\u3046\u306e\u306b\u53c2\u62dd\u5ba2\u306e\u4e00\u4eba\u3082\u5c45\u306a\u3044\u308f\u306d\u3001\u30a2\u30f3\u30bf\u3001\u6687\u306a\u3089\u3061\u3087\u3063\u3068\u52e7\u8a98\u3057\u3066\u6765\u306a\u3055\u3044\u3088"], 
+null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3044\u3044\u52a0\u6e1b\u306b\u3057\u306a\u3055\u3044\uff01", "\u5012\u308c\u306a\u3055\u3044\uff01", "\u3053\u308c\u3067\u7d42\u308f\u308a\u306d"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u75db\u3044\u308f\u306d\uff01", "\u8a31\u3055\u306a\u3044\u308f\u3088\uff01", "\u304a\u7078\u304c\u5fc5\u8981\u306d\uff01"], null), new cljs.core.PersistentVector(null, 
+3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u547c\u3093\u3060\u304b\u3057\u3089\uff1f", "\u4f55\uff1f\u3057\u3064\u3053\u3044\u308f\u306d", "\u2026\u9000\u6cbb\u304c\u5fc5\u8981\u306a\u3088\u3046\u306d"], null)), 100, 30, 30, 30, 30, new cljs.core.Keyword(null, "human", "human", 1113543839), new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), new cljs.core.Keyword(null, "reigeki", "reigeki", 2101791684), 
+new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), new cljs.core.Keyword(null, "barrage-big", "barrage-big", 3576920837), new cljs.core.Keyword(null, "shanghai", "shanghai", 4561485949)], null), 
+new cljs.core.Keyword(null, "human-clothe", "human-clothe", 950183325), 0, 0, "img/chara/reimu.png"), new cljs.core.Keyword(null, "yousei1", "yousei1", 4317081291), touhou_barrage_fighters.data.__GT_Character.call(null, "\u5996\u7cbeA", touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3053\u308c\u304b\u3089\u3088\u308d\u3057\u304f\u306d\uff01"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+["\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u266a", "\u795e\u793e\u3063\u3066\u3061\u3087\u3063\u3068\u9000\u5c48\u3059\u308b\u308f\u301c", "\u307f\u3093\u306a\u3069\u3053\u306b\u884c\u3063\u305f\u306e\u304b\u306a"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3048\u3044\uff01", "\u8ca0\u3051\u306a\u3044\u3088\uff01", "\u3084\u3089\u306a\u3044\u3068\u3084\u3089\u308c\u308b\u308f\u2026"], null), 
+new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3052\u3047\u3063\uff01", "\u75db\u3044\u75db\u3044\uff01", "\u3084\u3063\u305f\u306a\u3041\u301c"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u306a\u3041\u306b\uff1f"], null)), 50, 10, 10, 10, 10, new cljs.core.Keyword(null, "fairy", "fairy", 1111097671), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+"barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405)], null), new cljs.core.Keyword(null, "fairy-clothe", "fairy-clothe", 4386450421), 0, 0, "img/chara/yousei1.png"), 
+new cljs.core.Keyword(null, "yousei2", "yousei2", 4317081292), touhou_barrage_fighters.data.__GT_Character.call(null, "\u5996\u7cbeB", touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3088\u308d\u3057\u304f\u306d\u301c!"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u266a", 
+"\u795e\u793e\u3063\u3066\u3061\u3087\u3063\u3068\u9000\u5c48\u3059\u308b\u308f\u301c", "\u307f\u3093\u306a\u3069\u3053\u306b\u884c\u3063\u305f\u306e\u304b\u306a"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3048\u3044\uff01", "\u8ca0\u3051\u306a\u3044\u3088\uff01", "\u3084\u3089\u306a\u3044\u3068\u3084\u3089\u308c\u308b\u308f\u2026"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3052\u3047\u3063\uff01", 
+"\u75db\u3044\u75db\u3044\uff01", "\u3084\u3063\u305f\u306a\u3041\u301c"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u306a\u3041\u306b\uff1f"], null)), 50, 10, 10, 10, 10, new cljs.core.Keyword(null, "fairy", "fairy", 1111097671), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), 
+new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405)], null), new cljs.core.Keyword(null, "fairy-clothe", "fairy-clothe", 4386450421), 0, 0, "img/chara/yousei2.png"), new cljs.core.Keyword(null, "yousei3", "yousei3", 4317081293), touhou_barrage_fighters.data.__GT_Character.call(null, 
+"\u5996\u7cbeC", touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3088\u308d\u3057\u304f\u306d\u301c!"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u266a", "\u795e\u793e\u3063\u3066\u3061\u3087\u3063\u3068\u9000\u5c48\u3059\u308b\u308f\u301c", "\u307f\u3093\u306a\u3069\u3053\u306b\u884c\u3063\u305f\u306e\u304b\u306a"], 
 null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3048\u3044\uff01", "\u8ca0\u3051\u306a\u3044\u3088\uff01", "\u3084\u3089\u306a\u3044\u3068\u3084\u3089\u308c\u308b\u308f\u2026"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3052\u3047\u3063\uff01", "\u75db\u3044\u75db\u3044\uff01", "\u3084\u3063\u305f\u306a\u3041\u301c"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, 
 ["\u306a\u3041\u306b\uff1f"], null)), 50, 10, 10, 10, 10, new cljs.core.Keyword(null, "fairy", "fairy", 1111097671), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, 
-"barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405)], null), new cljs.core.Keyword(null, "fairy-clothe", "fairy-clothe", 4386450421), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/yousei2/normal.png", new cljs.core.Keyword(null, "komari", "komari", 4183078305), "img/chara/yousei2/itazura.png", new cljs.core.Keyword(null, "akire", "akire", 1106777956), "img/chara/yousei2/akire.png", 
-new cljs.core.Keyword(null, "odoroki", "odoroki", 3711497223), "img/chara/yousei2/odoroki.png", new cljs.core.Keyword(null, "naki", "naki", 1017277891), "img/chara/yousei2/naki.png", new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), "img/chara/yousei2/ikari.png", new cljs.core.Keyword(null, "egao", "egao", 1017015234), "img/chara/yousei2/egao.png"], null)), new cljs.core.Keyword(null, "yousei3", "yousei3", 4317081293), touhou_barrage_fighters.data.__GT_Character.call(null, "\u5996\u7cbeC", 
-touhou_barrage_fighters.data.__GT_Word.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3088\u308d\u3057\u304f\u306d\u301c!"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u307e\u3063\u304f\u306e\u301c\u3046\u3061\u301c\u266a", "\u795e\u793e\u3063\u3066\u3061\u3087\u3063\u3068\u9000\u5c48\u3059\u308b\u308f\u301c", "\u307f\u3093\u306a\u3069\u3053\u306b\u884c\u3063\u305f\u306e\u304b\u306a"], 
-null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3048\u3044\uff01", "\u8ca0\u3051\u306a\u3044\u3088\uff01", "\u3084\u3089\u306a\u3044\u3068\u3084\u3089\u308c\u308b\u308f\u2026"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["\u3052\u3047\u3063\uff01", "\u75db\u3044\u75db\u3044\uff01", "\u3084\u3063\u305f\u306a\u3041\u301c"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, 
-["\u306a\u3041\u306b\uff1f"], null)), 50, 10, 10, 10, 10, new cljs.core.Keyword(null, "fairy", "fairy", 1111097671), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, "barrage-mini", "barrage-mini", 3158335382), new cljs.core.Keyword(null, 
-"barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405)], null), new cljs.core.Keyword(null, "fairy-clothe", "fairy-clothe", 4386450421), 0, 0, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "normal", "normal", 4269125721), "img/chara/yousei3/normal.png", new cljs.core.Keyword(null, "urei", "urei", 1017502579), "img/chara/yousei3/urei.png", new cljs.core.Keyword(null, "akire", "akire", 1106777956), "img/chara/yousei3/akire.png", 
-new cljs.core.Keyword(null, "odoroki", "odoroki", 3711497223), "img/chara/yousei3/odoroki.png", new cljs.core.Keyword(null, "naki", "naki", 1017277891), "img/chara/yousei3/naki.png", new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), "img/chara/yousei3/ikari.png", new cljs.core.Keyword(null, "egao", "egao", 1017015234), "img/chara/yousei3/egao.png"], null))], null);
+"barrage-mid", "barrage-mid", 3576931405), new cljs.core.Keyword(null, "barrage-mid", "barrage-mid", 3576931405)], null), new cljs.core.Keyword(null, "fairy-clothe", "fairy-clothe", 4386450421), 0, 0, "img/chara/yousei3.png")], null);
 touhou_barrage_fighters.battle = {};
 touhou_barrage_fighters.battle.youkai_taiji = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "yousei1", "yousei1", 4317081291), new cljs.core.Keyword(null, "yousei2", "yousei2", 4317081292)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "yousei2", "yousei2", 4317081292), new cljs.core.Keyword(null, 
 "yousei3", "yousei3", 4317081293), new cljs.core.Keyword(null, "ru-mia", "ru-mia", 4387128109)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "chirno", "chirno", 3947477505), new cljs.core.Keyword(null, "daiyousei", "daiyousei", 4474805718)], null)], null);
@@ -23658,7 +23656,7 @@ touhou_barrage_fighters.storage.load = function() {
 goog.exportSymbol("touhou_barrage_fighters.storage.load", touhou_barrage_fighters.storage.load);
 touhou_barrage_fighters.core = {};
 touhou_barrage_fighters.core.character_loop = function(a, b) {
-  dommy.core.listen_BANG_.call(null, document.getElementById("tatie"), new cljs.core.Keyword(null, "click", "click", 1108654330), function(b) {
+  dommy.core.listen_BANG_.call(null, document.getElementById("temple-tatie"), new cljs.core.Keyword(null, "click", "click", 1108654330), function(b) {
     return cljs.core.async.put_BANG_.call(null, a, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "touch", "touch", 1124455089), b], null));
   });
   var c = cljs.core.async.chan.call(null, 1);
@@ -23721,15 +23719,15 @@ touhou_barrage_fighters.core.character_loop = function(a, b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (3 === d) {
-          var e = c[7], f = c[8], l = c[9], n = function() {
+          var f = c[8], e = c[7], l = c[9], n = function() {
             return function(a, b, c, d, e) {
               return function(a, b) {
                 return b.call(null, a);
               };
-            }(e, e, f, l, d);
+            }(e, f, e, l, d);
           }(), p = n.call(null, new cljs.core.Keyword(null, "touch", "touch", 1124455089), e);
-          c[8] = n;
-          c[9] = p;
+          c[8] = p;
+          c[9] = n;
           cljs.core.truth_(p) ? c[1] = 5 : c[1] = 6;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
@@ -23737,7 +23735,7 @@ touhou_barrage_fighters.core.character_loop = function(a, b) {
           return p = c[2], cljs.core.async.impl.ioc_helpers.return_chan.call(null, c, p);
         }
         if (5 === d) {
-          return e = c[7], f = c[8], l = c[9], p = function() {
+          return f = c[8], e = c[7], l = c[9], p = function() {
             return function(a, c, d, e, f, g, h, k, l) {
               return function() {
                 var m = cljs.core.async.chan.call(null, 1);
@@ -23792,12 +23790,12 @@ touhou_barrage_fighters.core.character_loop = function(a, b) {
                         return function(a) {
                           var c = a[1];
                           if (2 === c) {
-                            var c = a[2], d = touhou_barrage_fighters.ui.behave_BANG_.call(null, b, new cljs.core.Keyword(null, "normal", "normal", 4269125721));
+                            var c = a[2], d = touhou_barrage_fighters.ui.switch_behave_BANG_.call(null, new cljs.core.Keyword(null, "#temple-tatie", "#temple-tatie", 4185319576), new cljs.core.Keyword(null, "ikari", "ikari", 1114158440), new cljs.core.Keyword(null, "normal", "normal", 4269125721));
                             a[7] = c;
                             return cljs.core.async.impl.ioc_helpers.return_chan.call(null, a, d);
                           }
                           if (1 === c) {
-                            var c = touhou_barrage_fighters.ui.say_BANG_.call(null, b, new cljs.core.Keyword(null, "selected", "selected", 2205476365)), d = touhou_barrage_fighters.ui.behave_BANG_.call(null, b, new cljs.core.Keyword(null, "ikari", "ikari", 1114158440)), e = cljs.core.async.timeout.call(null, 3E3);
+                            var c = touhou_barrage_fighters.ui.say_BANG_.call(null, b, new cljs.core.Keyword(null, "selected", "selected", 2205476365)), d = touhou_barrage_fighters.ui.switch_behave_BANG_.call(null, new cljs.core.Keyword(null, "#temple-tatie", "#temple-tatie", 4185319576), new cljs.core.Keyword(null, "normal", "normal", 4269125721), new cljs.core.Keyword(null, "ikari", "ikari", 1114158440)), e = cljs.core.async.timeout.call(null, 3E3);
                             a[8] = c;
                             a[9] = d;
                             return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, a, 2, e);
@@ -23815,21 +23813,21 @@ touhou_barrage_fighters.core.character_loop = function(a, b) {
                 }(m, a, c, d, e, f, g, h, k, l));
                 return m;
               };
-            }(l, l, e, f, e, e, f, l, d);
-          }().call(null, l), c[2] = p, c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+            }(f, f, e, l, e, f, e, l, d);
+          }().call(null, f), c[2] = p, c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (6 === d) {
-          var e = c[7], r = c[10], f = c[8], p = f.call(null, new cljs.core.Keyword(null, "timeout", "timeout", 3994960083), e);
+          var r = c[10], e = c[7], l = c[9], p = l.call(null, new cljs.core.Keyword(null, "timeout", "timeout", 3994960083), e);
           c[10] = p;
           cljs.core.truth_(p) ? c[1] = 8 : c[1] = 9;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
-        return 7 === d ? (e = c[7], n = c[2], p = (new cljs.core.Keyword(null, "exit", "exit", 1017031824)).cljs$core$IFn$_invoke$arity$1(e), c[11] = n, cljs.core.truth_(p) ? c[1] = 11 : c[1] = 12, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 8 === d ? (e = c[7], r = c[10], f = c[8], p = function() {
+        return 7 === d ? (e = c[7], n = c[2], p = (new cljs.core.Keyword(null, "exit", "exit", 1017031824)).cljs$core$IFn$_invoke$arity$1(e), c[11] = n, cljs.core.truth_(p) ? c[1] = 11 : c[1] = 12, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 8 === d ? (r = c[10], e = c[7], l = c[9], p = function() {
           return function(a, c, d, e, f, g, h, k, l) {
             return function() {
               return touhou_barrage_fighters.ui.say_BANG_.call(null, b, new cljs.core.Keyword(null, "in-temple", "in-temple", 3345930599));
             };
-          }(r, r, e, f, e, e, r, f, d);
+          }(r, r, e, l, e, r, e, l, d);
         }().call(null, r), c[2] = p, c[1] = 10, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 9 === d ? (c[2] = null, c[1] = 10, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 10 === d ? (p = c[2], c[2] = p, c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 11 === d ? (c[2] = null, c[1] = 13, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 12 === d ? cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 14, a) : 13 === d ? (p = c[2], 
         c[2] = p, c[1] = 4, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 14 === d ? (e = c[2], c[7] = e, c[2] = null, c[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
       });
@@ -23992,19 +23990,19 @@ touhou_barrage_fighters.core.player_loop = function(a, b) {
         }
         if (2 === d) {
           var e = a, k = c[2];
-          c[7] = e;
-          c[8] = k;
+          c[7] = k;
+          c[8] = e;
           c[2] = null;
           c[1] = 3;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (3 === d) {
-          var m = c[9], l = c[10], e = c[7], k = c[8], n = function() {
+          var k = c[7], m = c[9], l = c[10], e = c[8], n = function() {
             return function(a, b, c, d, e, f, g) {
               return function(a, b) {
                 return b.call(null, a);
               };
-            }(e, k, m, l, e, k, d);
+            }(e, k, k, m, l, e, d);
           }(), p = n.call(null, new cljs.core.Keyword(null, "temple", "temple", 4431519679), k);
           c[9] = p;
           c[10] = n;
@@ -24015,27 +24013,27 @@ touhou_barrage_fighters.core.player_loop = function(a, b) {
           return p = c[2], cljs.core.async.impl.ioc_helpers.return_chan.call(null, c, p);
         }
         if (5 === d) {
-          return m = c[9], l = c[10], e = c[7], k = c[8], p = function() {
+          return k = c[7], m = c[9], l = c[10], e = c[8], p = function() {
             return function(a, b, c, d, e, f, g, h, k, l, m) {
               return function() {
                 return dommy.core.replace_BANG_.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("content"))[0], touhou_barrage_fighters.ui.temple.call(null, e));
               };
-            }(m, m, k, l, e, k, m, l, e, k, d);
+            }(m, m, k, l, e, k, k, m, l, e, d);
           }().call(null, m), c[2] = p, c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (6 === d) {
-          var l = c[10], r = c[11], k = c[8], p = l.call(null, new cljs.core.Keyword(null, "map", "map", 1014012110), k);
+          var k = c[7], r = c[11], l = c[10], p = l.call(null, new cljs.core.Keyword(null, "map", "map", 1014012110), k);
           c[11] = p;
           cljs.core.truth_(p) ? c[1] = 8 : c[1] = 9;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
-        return 7 === d ? (c[12] = c[2], cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 11, b)) : 8 === d ? (l = c[10], r = c[11], e = c[7], k = c[8], p = function() {
+        return 7 === d ? (c[12] = c[2], cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 11, b)) : 8 === d ? (k = c[7], r = c[11], l = c[10], e = c[8], p = function() {
           return function(a, b, c, d, e, f, g, h, k, l, m) {
             return function() {
               return dommy.core.replace_BANG_.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("content"))[0], touhou_barrage_fighters.ui.in_map.call(null, e));
             };
-          }(r, r, k, l, e, k, l, r, e, k, d);
-        }().call(null, r), c[2] = p, c[1] = 10, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 9 === d ? (c[2] = null, c[1] = 10, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 10 === d ? (p = c[2], c[2] = p, c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 11 === d ? (e = c[7], k = c[2], c[7] = e, c[8] = k, c[2] = null, c[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
+          }(r, r, k, l, e, k, k, r, l, e, d);
+        }().call(null, r), c[2] = p, c[1] = 10, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 9 === d ? (c[2] = null, c[1] = 10, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 10 === d ? (p = c[2], c[2] = p, c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 11 === d ? (e = c[8], k = c[2], c[7] = k, c[8] = e, c[2] = null, c[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
       });
     }(), e = function() {
       var a = d.call(null);
@@ -24117,8 +24115,8 @@ touhou_barrage_fighters.core.main = function() {
               };
             }(l, n, p, r, s, q, c);
           }(), e = dommy.core.listen_BANG_.call(null, q, new cljs.core.Keyword(null, "click", "click", 1108654330), e);
-          b[9] = e;
-          b[10] = s;
+          b[9] = s;
+          b[10] = e;
           return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, b, 2, a);
         }
         return null;
@@ -24134,7 +24132,7 @@ touhou_barrage_fighters.core.main = function() {
 };
 cljs.core._STAR_print_fn_STAR_ = function() {
   var a = function(a) {
-    return console.log(a);
+    return console.log(cljs.core.apply.call(null, cljs.core.str, a));
   }, b = function(b) {
     var d = null;
     0 < arguments.length && (d = cljs.core.array_seq(Array.prototype.slice.call(arguments, 0), 0));

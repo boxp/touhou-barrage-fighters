@@ -13,16 +13,16 @@
   "キャラクターを喋らせる"
   [chan chara]
   ; 立ち絵の判定
-  (dommy/listen! (sel1 :#tatie) 
+  (dommy/listen! (sel1 :#temple-tatie) 
                  :click #(put! chan {:touch %}))
   ; 台詞の設定
   (go (loop [input (<! chan)]
         (condp (fn [map key] (key map)) input
           :touch :>> #(go
                        (ui/say! chara :selected)
-                       (ui/behave! chara :ikari)
+                       (ui/switch-behave! :#temple-tatie :normal :ikari)
                        (<! (timeout 3000))
-                       (ui/behave! chara :normal))
+                       (ui/switch-behave! :#temple-tatie :ikari :normal))
           :timeout :>> #(ui/say! chara :in-temple)
           nil)
         (if (:exit input)
@@ -93,5 +93,5 @@
           (player-loop player-chan))
         (tutorial)))))
 
-(set! *print-fn* #(.log js/console %&))
+(set! *print-fn* #(.log js/console (apply str %&)))
 (set! (.-onload js/window) main)

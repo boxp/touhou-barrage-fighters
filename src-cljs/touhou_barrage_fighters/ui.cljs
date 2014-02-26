@@ -11,11 +11,22 @@
       [:div#youkai-taiji "妖怪退治"]
       [:div#akai-koumu "紅い妖霧の謎"]]])
 
+;(deftemplate temple [player]
+;  [:div#temple-content.content
+;    [:div#info (str "id: " (:name player))]
+;    [:div#character
+;      [:div#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
+;      [:div#serihu-wrapper
+;        [:img#hukidasi {:src "img/chara/hukidasi.png"}]
+;        [:div#serihu]]]])
+
 (deftemplate temple [player]
   [:div#temple-content.content
     [:div#info (str "id: " (:name player))]
     [:div#character
-      [:img#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
+      [:div.tatie.normal
+        {:style 
+          {:background-image (str "url(" (-> (nth (:member player) (:main player)) :img) ")")}}]
       [:div#serihu-wrapper
         [:img#hukidasi {:src "img/chara/hukidasi.png"}]
         [:div#serihu]]]])
@@ -30,6 +41,25 @@
       [:input#game-start {:type "button"
                           :value "スタート"}]]])
   
+;(deftemplate in-temple [player]
+;  [:div#wrapper.root
+;    [:div#sidebar
+;      [:div#temple.sidebar-banner "博霊神社"]
+;      [:div#customize.sidebar-banner "カスタマイズ"]
+;      [:div#rest.sidebar-banner "休憩所"]
+;      [:div#start.sidebar-banner "出発"]]
+;    [:div#temple-content.content.current {:name "temple-content"}
+;      [:div#info (str "id: " (:name player))]
+;      [:div#character
+;        [:img#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
+;        [:div#serihu-wrapper
+;          [:img#hukidasi {:src "img/chara/hukidasi.png"}]
+;          [:div#serihu]]]]
+;    [:div#map.content {:name "map"}
+;      [:ul#map-list
+;        [:li "妖怪退治"]
+;        [:li "紅い妖霧の謎"]]]])
+
 (deftemplate in-temple [player]
   [:div#wrapper.root
     [:div#sidebar
@@ -40,7 +70,9 @@
     [:div#temple-content.content.current {:name "temple-content"}
       [:div#info (str "id: " (:name player))]
       [:div#character
-        [:img#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
+        [:div#temple-tatie.tatie.normal
+          {:style 
+            {:background-image (str "url(" (-> (nth (:member player) (:main player)) :img) ")")}}]
         [:div#serihu-wrapper
           [:img#hukidasi {:src "img/chara/hukidasi.png"}]
           [:div#serihu]]]]
@@ -78,10 +110,10 @@
   (set! (.-innerHTML (sel1 :#serihu))
      (rand-nth (genre (:words chara)))))
 
-(defn behave!
-  [chara exp]
-  (set! (. (sel1 :#tatie) -src)
-     (exp (:img chara))))
+(defn switch-behave!
+  [target bef-exp exp]
+  (dommy/remove-class! (sel1 target) bef-exp)
+  (dommy/add-class! (sel1 target) exp))
 
 (defn close-shutter!
   []

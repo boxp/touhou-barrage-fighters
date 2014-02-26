@@ -140,10 +140,45 @@ img#serihu {
   width: 100%;
 }
 
-#tatie {
+.tatie {
   margin-top: auto;
   bottom: 0;
-  height: 100%;
+  background-size: 700% 100%;
+  position: absolute;
+}
+
+#temple-tatie {
+  float: left;
+  width: 50%;
+  height: 500px;
+}
+
+.normal {
+  background-position: 0 0;
+}
+
+.special {
+  background-position: 16.666% 0;
+}
+
+.akire {
+  background-position: 33.333% 0;
+}
+
+.odoroki {
+  background-position: 50% 0;
+}
+
+.naki {
+  background-position: 66.666% 0;
+}
+
+.ikari {
+  background-position: 83.333% 0;
+}
+
+.egao {
+  background-position: 100% 0;
 }
 
 #serihu-wrapper {

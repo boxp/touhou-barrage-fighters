@@ -8,17 +8,21 @@
                  [prismatic/dommy "0.1.1"]
                  [ring/ring-jetty-adapter "1.1.6"]
                  [cljs-http "0.1.2"]]
-  :plugins [[lein-cljsbuild "1.0.1"]]
-  ;clj/cljsで共有するソースコードを設定
-  :crossovers [touhou-barrage-fighters.data]
+  :plugins [[lein-cljsbuild "1.0.1"]
+            [com.keminglabs/cljx "0.3.2"]]
   :main touhou-barrage-fighters.core
   :source-paths ["src-clj"]
   :uberjar-name "touhou-barrage-fighters-standalone.jar"
   :min-lein-version "2.0.0"
+  :cljx {:builds [{:source-paths ["src-cljx"]
+                 :output-path "src-clj"
+                 :rules :clj}
+
+                {:source-paths ["src-cljx"]
+                 :output-path "src-cljs"
+                 :rules :cljs}]}
   :cljsbuild {
     :builds [{
-      ;clj/cljsで共有するソースコードのパスを設定
-      :crossover-path "crossover-src"
       ;ソースコードを配置するパス
       :source-paths ["src-cljs"]
       ;nodejsか標準を選択
