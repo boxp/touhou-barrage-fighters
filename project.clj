@@ -13,6 +13,7 @@
   :crossovers [touhou-barrage-fighters.data]
   :main touhou-barrage-fighters.core
   :source-paths ["src-clj"]
+  :uberjar-name "touhou-barrage-fighters-standalone.jar"
   :cljsbuild {
     :builds [{
       ;clj/cljsで共有するソースコードのパスを設定
