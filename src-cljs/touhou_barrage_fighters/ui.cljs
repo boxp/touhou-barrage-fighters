@@ -110,10 +110,16 @@
   (set! (.-innerHTML (sel1 :#serihu))
      (rand-nth (genre (:words chara)))))
 
+(defn switch-character!
+  [target chara]
+  (set! (aget (.. (sel1 target) -style) "background-image")
+    (:img chara)))
+
 (defn switch-behave!
   [target bef-exp exp]
-  (dommy/remove-class! (sel1 target) bef-exp)
-  (dommy/add-class! (sel1 target) exp))
+  (-> (sel1 target)
+    (dommy/remove-class! bef-exp)
+    (dommy/add-class! exp)))
 
 (defn close-shutter!
   []

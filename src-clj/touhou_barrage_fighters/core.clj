@@ -17,7 +17,7 @@
               "index.html"
               (str "." (:uri req)))
         accept (split (get headers "accept") #",")]
-    (println (first accept))
+    (println (first accept) (slurp (:body req)) (:uri req))
     {:status 200
      :headers {"Content-Type" (first accept)}
      :body (slurp-content (first accept) url)}))

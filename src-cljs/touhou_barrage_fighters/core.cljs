@@ -17,13 +17,13 @@
                  :click #(put! chan {:touch %}))
   ; 台詞の設定
   (go (loop [input (<! chan)]
-        (condp (fn [map key] (key map)) input
-          :touch :>> #(go
+        (case (-> input keys first)
+          :touch (<! (go
                        (ui/say! chara :selected)
                        (ui/switch-behave! :#temple-tatie :normal :ikari)
                        (<! (timeout 3000))
-                       (ui/switch-behave! :#temple-tatie :ikari :normal))
-          :timeout :>> #(ui/say! chara :in-temple)
+                       (ui/switch-behave! :#temple-tatie :ikari :normal)))
+          :timeout (ui/say! chara :in-temple)
           nil)
         (if (:exit input)
           nil
@@ -66,10 +66,10 @@
   [new-player chan]
   (go (loop [player new-player
              input (<! chan)]
-        (condp (fn [map key] (key map)) input
-          :temple :>> #(dommy/replace! (sel1 :.content) 
+        (condp (-> input keys first)
+          :temple (dommy/replace! (sel1 :.content) 
                                        (ui/temple player))
-          :map :>> #(dommy/replace! (sel1 :.content)
+          :map (dommy/replace! (sel1 :.content)
                                     (ui/in-map player))
           nil)
         (recur player (<! chan)))))
@@ -88,6 +88,7 @@
         (dommy/replace! (sel1 :.root) (ui/init-acount))
         (dommy/listen! (sel1 :#game-start)
                        :click #(put! player-chan (init-player)))
+        ; 認証ボタンが押されるまでブロック
         (doto (<! player-chan)
           (in-temple-win player-chan)
           (player-loop player-chan))
