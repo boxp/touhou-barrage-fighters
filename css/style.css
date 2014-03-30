@@ -35,6 +35,10 @@ img#serihu {
   height: 20%;
 }
 
+#info > p {
+  margin: 0;
+}
+
 .content {
   color: black;
   height: 100%;

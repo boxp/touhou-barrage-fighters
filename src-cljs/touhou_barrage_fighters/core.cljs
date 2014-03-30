@@ -12,9 +12,6 @@
 (defn character-loop
   "キャラクターを喋らせる"
   [chan chara]
-  ; 立ち絵の判定
-  (dommy/listen! (sel1 :#temple-tatie) 
-                 :click #(put! chan {:touch %}))
   ; 台詞の設定
   (go (loop [input (<! chan)]
         (case (-> input keys first)
@@ -47,11 +44,19 @@
   (let [chara-chan (chan)]
     ; 画面を神社に
     (dommy/replace! (sel1 :.root) (ui/in-temple player))
+    ; 神社へのボタン
     (dommy/listen! (sel1 :#temple) 
                    :click #(ui/switch-content :#temple-content))
+    ; 出撃ボタン
     (dommy/listen! (sel1 :#start)
                    :click #(ui/switch-content :#map))
-    (character-loop chara-chan (-> player :member first))))
+    ; キャラクターを喋らせ始める
+    (character-loop chara-chan (-> player :member first))
+    ; 立ち絵の判定
+    (dommy/listen! (sel1 :#temple-tatie) 
+                 :click #(put! player-chan {:touch %}))
+    ; 時計をスタートさせる
+    (ui/start-watch!)))
 
 (defn ^:export init-player
   []
@@ -62,15 +67,23 @@
     new-player))
 
 (defn player-loop
-  "プレイヤーのやり取りをする"
+  "プレイヤーデータを扱う"
   [new-player chan]
   (go (loop [player new-player
              input (<! chan)]
-        (condp (-> input keys first)
-          :temple (dommy/replace! (sel1 :.content) 
-                                       (ui/temple player))
-          :map (dommy/replace! (sel1 :.content)
-                                    (ui/in-map player))
+        (case (-> input keys first)
+          :save (do 
+                  ; セーブ
+                  (st/save player)
+                  (recur player (<! chan)))
+          :update ; プレイヤー情報をアップデート
+                  (let [ks (second input)
+                        f (input 2)
+                        new-player (update-in ks f)]
+                    (recur new-player (<! chan)))
+          :get ; プレイヤー情報を取得
+               (do (>! chan player)
+                 (recur player (<! chan)))
           nil)
         (recur player (<! chan)))))
 

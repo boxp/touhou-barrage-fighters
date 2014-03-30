@@ -11,15 +11,6 @@
       [:div#youkai-taiji "妖怪退治"]
       [:div#akai-koumu "紅い妖霧の謎"]]])
 
-;(deftemplate temple [player]
-;  [:div#temple-content.content
-;    [:div#info (str "id: " (:name player))]
-;    [:div#character
-;      [:div#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
-;      [:div#serihu-wrapper
-;        [:img#hukidasi {:src "img/chara/hukidasi.png"}]
-;        [:div#serihu]]]])
-
 (deftemplate temple [player]
   [:div#temple-content.content
     [:div#info (str "id: " (:name player))]
@@ -41,25 +32,6 @@
       [:input#game-start {:type "button"
                           :value "スタート"}]]])
   
-;(deftemplate in-temple [player]
-;  [:div#wrapper.root
-;    [:div#sidebar
-;      [:div#temple.sidebar-banner "博霊神社"]
-;      [:div#customize.sidebar-banner "カスタマイズ"]
-;      [:div#rest.sidebar-banner "休憩所"]
-;      [:div#start.sidebar-banner "出発"]]
-;    [:div#temple-content.content.current {:name "temple-content"}
-;      [:div#info (str "id: " (:name player))]
-;      [:div#character
-;        [:img#tatie {:src (-> (nth (:member player) (:main player)) :img :normal)}]
-;        [:div#serihu-wrapper
-;          [:img#hukidasi {:src "img/chara/hukidasi.png"}]
-;          [:div#serihu]]]]
-;    [:div#map.content {:name "map"}
-;      [:ul#map-list
-;        [:li "妖怪退治"]
-;        [:li "紅い妖霧の謎"]]]])
-
 (deftemplate in-temple [player]
   [:div#wrapper.root
     [:div#sidebar
@@ -68,7 +40,10 @@
       [:div#rest.sidebar-banner "休憩所"]
       [:div#start.sidebar-banner "出発"]]
     [:div#temple-content.content.current {:name "temple-content"}
-      [:div#info (str "id: " (:name player))]
+      [:div#info 
+        [:p (str "id: " (:name player))]
+        [:div#watch]]
+      [:div#watch]
       [:div#character
         [:div#temple-tatie.tatie.normal
           {:style 
@@ -112,7 +87,7 @@
 
 (defn switch-character!
   [target chara]
-  (set! (aget (.. (sel1 target) -style) "background-image")
+  (set! (.. (sel1 target) -style -backgroundImage)
     (:img chara)))
 
 (defn switch-behave!
@@ -134,6 +109,13 @@
         max-height (.. js/document -body -clientHeight)
         resizer (fxdom/ResizeHeight. shutter max-height 0 1000)]
     (. resizer play)))
+
+(defn start-watch!
+  []
+  (let [watch (sel1 :#watch)]
+    (go (while true
+          (dommy/set-text! watch (. (js/Date.) toLocaleString))
+          (<! (timeout 1000))))))
 
 (defn departure
   [place]
