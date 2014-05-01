@@ -43,9 +43,9 @@
         m-attack (+ (:m-attack player)
                     (:m-attack card))
         p-defence (+ (:p-defence enemy)
-                     (-> dt/equipments (:equipment enemy) :p-defence))
+                     (-> enemy :equipment dt/equipments :p-defence))
         m-defence (+ (:m-defence enemy)
-                     (-> dt/equipments (:equipment enemy) :m-defence))
+                     (-> enemy :equipment dt/equipments :m-defence))
         p-damage (- p-attack p-defence)
         m-damage (- m-attack m-defence)
         damage (max p-damage m-damage)]
@@ -53,71 +53,43 @@
         0
         damage)))
 
-(defn battle-loop
-  [place player enemy]
-  (print (:name player) "vs" (:name enemy))
-  (go-loop [player-hp (:hp player)
-            enemy-hp (:hp enemy)
-            player-cards (:cards player)
-            enemy-cards (:cards enemy)]
-    (let [player-card ((first player-cards) dt/spells)
-          enemy-card ((first enemy-cards) dt/spells)
-          hit-player->enemy (hit? player enemy player-card)
-          hit-enemy->player (hit? enemy player enemy-card)
-          damage-player->enemy (calc-damage-point player enemy player-card)
-          damage-enemy->player (calc-damage-point enemy player player-card)
-          new-player-hp (- player-hp damage-enemy->player)
-          new-enemy-hp (- enemy-hp damage-player->enemy)
-          new-player-cards (rest player-cards)
-          new-enemy-cards (rest enemy-cards)]
-      (print (:name player) "の攻撃")
-      (print "スペルカード「" (:name player-card) "」")
-      (print (if hit-player->enemy "ヒット！" "外れた!"))
-      (print (:name enemy) ":残りライフ" new-enemy-hp)
-      (print (:name enemy) "の攻撃")
-      (print (if hit-player->enemy "ヒット！" "外れた!"))
-      (print "スペルカード「" (:name enemy-card) "」")
-      (print (:name player) ":残りライフ" new-player-hp)
-      (if 
-        (or (< new-player-hp 0)
-            (< new-enemy-hp 0))
-        {:player 
-          (dt/->Character 
-            (:name player)
-            (:words player)
-            new-player-hp
-            (:p-attack player)
-            (:m-attack player)
-            (:p-defence player)
-            (:m-defence player)
-            (:job player)
-            (:cards player)
-            (:equipment player)
-            (:level player)
-            (:exp player)
-            (:img player))
-        :enemy
-          (dt/->Character 
-            (:name player)
-            (:words enemy)
-            new-enemy-hp
-            (:p-attack enemy)
-            (:m-attack enemy)
-            (:p-defence enemy)
-            (:m-defence enemy)
-            (:job enemy)
-            (:cards enemy)
-            (:equipment enemy)
-            (:level enemy)
-            (:exp enemy)
-            (:img enemy))}
-        (recur new-player-hp
-               new-enemy-hp
-               new-player-cards
-               new-enemy-cards)))))
+(defn battle
+  " 選択した２つのキャラクター戦闘させる"
+  [place attacker target]
+  (print (:name attacker) "vs" (:name target))
+  (let [attacker-cards (:cards attacker)
+        target-cards (:cards target)
+        attacker-card ((first attacker-cards) dt/spells)
+        target-card ((first target-cards) dt/spells)
+        attacker-hp (:hp attacker)
+        target-hp (:hp target)
+        hit-attacker->target (hit? attacker target attacker-card)
+        damage-attacker->target (if hit-attacker->target 
+                                  (calc-damage-point attacker target attacker-card)
+                                  0)
+        new-target-hp (- target-hp damage-attacker->target)
+        new-attacker-cards (rest attacker-cards)]
+    (print (:name attacker) "の攻撃")
+    (print "スペルカード「" (:name attacker-card) "」")
+    (print (if hit-attacker->target "ヒット！" "外れた!"))
+    (print (:name target) "に" damage-attacker->target "のダメージ")
+    {:attacker 
+      (merge attacker {:cards new-attacker-cards})
+     :target
+      (merge target {:hp new-target-hp})}))
 
-(defn ready-for-battle
+(defn halt?
+  "全滅しているかを問う述語"
+  [member]
+  (every? #(% :hp zero?) member))
+
+(defn battle-loop
   [player-member enemy-member]
   (go-loop [p-member player-member
             e-member enemy-member]
-    ))
+    ; 終わり？
+    (if 
+      (or 
+        ; どちらかが全滅
+        (or (halt? player-member)
+              (halt? enemy-member))))))

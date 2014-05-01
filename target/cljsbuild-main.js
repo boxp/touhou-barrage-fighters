@@ -1789,70 +1789,70 @@ cljs.core._invoke = function() {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
     return w.call(null, a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v);
-  }, C = function(a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w) {
+  }, G = function(a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w) {
     if (a ? a.cljs$core$IFn$_invoke$arity$20 : a) {
       return a.cljs$core$IFn$_invoke$arity$20(a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w);
     }
-    var C;
-    C = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if (!C && (C = cljs.core._invoke._, !C)) {
+    var G;
+    G = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if (!G && (G = cljs.core._invoke._, !G)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return C.call(null, a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w);
-  }, H = function(a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w, C) {
+    return G.call(null, a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w);
+  }, L = function(a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w, G) {
     if (a ? a.cljs$core$IFn$_invoke$arity$21 : a) {
-      return a.cljs$core$IFn$_invoke$arity$21(a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w, C);
+      return a.cljs$core$IFn$_invoke$arity$21(a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w, G);
     }
-    var H;
-    H = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if (!H && (H = cljs.core._invoke._, !H)) {
+    var L;
+    L = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if (!L && (L = cljs.core._invoke._, !L)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return H.call(null, a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w, C);
-  }, a = function(a, x, D, E, F, I, y, z, B, A, M, N, G, J, L, K, Q, O, R, T, U) {
+    return L.call(null, a, b, c, d, e, f, g, h, l, k, m, n, q, r, p, s, t, u, v, w, G);
+  }, a = function(a, x, C, D, E, H, y, z, B, A, M, N, F, I, K, J, Q, O, R, T, U) {
     switch(arguments.length) {
       case 1:
         return b.call(this, a);
       case 2:
         return c.call(this, a, x);
       case 3:
-        return d.call(this, a, x, D);
+        return d.call(this, a, x, C);
       case 4:
-        return e.call(this, a, x, D, E);
+        return e.call(this, a, x, C, D);
       case 5:
-        return f.call(this, a, x, D, E, F);
+        return f.call(this, a, x, C, D, E);
       case 6:
-        return g.call(this, a, x, D, E, F, I);
+        return g.call(this, a, x, C, D, E, H);
       case 7:
-        return h.call(this, a, x, D, E, F, I, y);
+        return h.call(this, a, x, C, D, E, H, y);
       case 8:
-        return k.call(this, a, x, D, E, F, I, y, z);
+        return k.call(this, a, x, C, D, E, H, y, z);
       case 9:
-        return m.call(this, a, x, D, E, F, I, y, z, B);
+        return m.call(this, a, x, C, D, E, H, y, z, B);
       case 10:
-        return l.call(this, a, x, D, E, F, I, y, z, B, A);
+        return l.call(this, a, x, C, D, E, H, y, z, B, A);
       case 11:
-        return n.call(this, a, x, D, E, F, I, y, z, B, A, M);
+        return n.call(this, a, x, C, D, E, H, y, z, B, A, M);
       case 12:
-        return q.call(this, a, x, D, E, F, I, y, z, B, A, M, N);
+        return q.call(this, a, x, C, D, E, H, y, z, B, A, M, N);
       case 13:
-        return r.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G);
+        return r.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F);
       case 14:
-        return s.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J);
+        return s.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I);
       case 15:
-        return p.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J, L);
+        return p.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I, K);
       case 16:
-        return t.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J, L, K);
+        return t.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I, K, J);
       case 17:
-        return u.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J, L, K, Q);
+        return u.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I, K, J, Q);
       case 18:
-        return w.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J, L, K, Q, O);
+        return w.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I, K, J, Q, O);
       case 19:
-        return v.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J, L, K, Q, O, R);
+        return v.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I, K, J, Q, O, R);
       case 20:
-        return C.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J, L, K, Q, O, R, T);
+        return G.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I, K, J, Q, O, R, T);
       case 21:
-        return H.call(this, a, x, D, E, F, I, y, z, B, A, M, N, G, J, L, K, Q, O, R, T, U);
+        return L.call(this, a, x, C, D, E, H, y, z, B, A, M, N, F, I, K, J, Q, O, R, T, U);
     }
     throw Error("Invalid arity: " + arguments.length);
   };
@@ -1875,8 +1875,8 @@ cljs.core._invoke = function() {
   a.cljs$core$IFn$_invoke$arity$17 = u;
   a.cljs$core$IFn$_invoke$arity$18 = w;
   a.cljs$core$IFn$_invoke$arity$19 = v;
-  a.cljs$core$IFn$_invoke$arity$20 = C;
-  a.cljs$core$IFn$_invoke$arity$21 = H;
+  a.cljs$core$IFn$_invoke$arity$20 = G;
+  a.cljs$core$IFn$_invoke$arity$21 = L;
   return a;
 }();
 cljs.core.ICloneable = function() {
@@ -6310,19 +6310,19 @@ cljs.core.apply_to = function(a, b, c) {
   if (17 === b) {
     return a.cljs$core$IFn$_invoke$arity$17 ? a.cljs$core$IFn$_invoke$arity$17(c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u) : a.call(null, c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u);
   }
-  var w = cljs.core._first.call(null, v), C = cljs.core._rest.call(null, v);
+  var w = cljs.core._first.call(null, v), G = cljs.core._rest.call(null, v);
   if (18 === b) {
     return a.cljs$core$IFn$_invoke$arity$18 ? a.cljs$core$IFn$_invoke$arity$18(c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w) : a.call(null, c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w);
   }
-  v = cljs.core._first.call(null, C);
-  C = cljs.core._rest.call(null, C);
+  v = cljs.core._first.call(null, G);
+  G = cljs.core._rest.call(null, G);
   if (19 === b) {
     return a.cljs$core$IFn$_invoke$arity$19 ? a.cljs$core$IFn$_invoke$arity$19(c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w, v) : a.call(null, c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w, v);
   }
-  var H = cljs.core._first.call(null, C);
-  cljs.core._rest.call(null, C);
+  var L = cljs.core._first.call(null, G);
+  cljs.core._rest.call(null, G);
   if (20 === b) {
-    return a.cljs$core$IFn$_invoke$arity$20 ? a.cljs$core$IFn$_invoke$arity$20(c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w, v, H) : a.call(null, c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w, v, H);
+    return a.cljs$core$IFn$_invoke$arity$20 ? a.cljs$core$IFn$_invoke$arity$20(c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w, v, L) : a.call(null, c, d, e, f, g, a, h, k, m, l, n, q, r, s, p, t, u, w, v, L);
   }
   throw Error("Only up to 20 arguments supported on functions");
 };
@@ -19587,24 +19587,24 @@ cljs.core.async.mult = function mult(b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (3 === k) {
-          var C = h[2], p = h;
-          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, p, C);
+          var G = h[2], p = h;
+          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, p, G);
         }
         if (35 === k) {
-          var H = h[2], S = p = h;
-          S[2] = H;
+          var L = h[2], S = p = h;
+          S[2] = L;
           S[1] = 29;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (4 === k) {
-          var r = h[8], x = h[2], D = null == x;
+          var r = h[8], x = h[2], C = null == x;
           h[8] = x;
           p = h;
-          cljs.core.truth_(D) ? p[1] = 5 : p[1] = 6;
+          cljs.core.truth_(C) ? p[1] = 5 : p[1] = 6;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (36 === k) {
-          var u = h[9], E = cljs.core.chunk_first.call(null, u), F = cljs.core.chunk_rest.call(null, u), I = cljs.core.count.call(null, E), y = F, z = E, B = I, A = 0;
+          var u = h[9], D = cljs.core.chunk_first.call(null, u), E = cljs.core.chunk_rest.call(null, u), H = cljs.core.count.call(null, D), y = E, z = D, B = H, A = 0;
           h[10] = y;
           h[11] = A;
           h[12] = B;
@@ -19615,11 +19615,11 @@ cljs.core.async.mult = function mult(b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (5 === k) {
-          var N = cljs.core.deref.call(null, c), G = cljs.core.seq.call(null, N), J = null, L = 0, K = 0;
-          h[14] = K;
-          h[15] = J;
-          h[16] = L;
-          h[17] = G;
+          var N = cljs.core.deref.call(null, c), F = cljs.core.seq.call(null, N), I = null, K = 0, J = 0;
+          h[14] = J;
+          h[15] = I;
+          h[16] = K;
+          h[17] = F;
           var Q = p = h;
           Q[2] = null;
           Q[1] = 8;
@@ -19671,7 +19671,7 @@ cljs.core.async.mult = function mult(b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (8 === k) {
-          var K = h[14], L = h[16], Da = K < L, p = h;
+          var J = h[14], K = h[16], Da = J < K, p = h;
           cljs.core.truth_(Da) ? p[1] = 10 : p[1] = 11;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
@@ -19700,7 +19700,7 @@ cljs.core.async.mult = function mult(b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (10 === k) {
-          var K = h[14], J = h[15], ca = cljs.core._nth.call(null, J, K), W = cljs.core.nth.call(null, ca, 0, null), Ja = cljs.core.nth.call(null, ca, 1, null);
+          var J = h[14], I = h[15], ca = cljs.core._nth.call(null, I, J), W = cljs.core.nth.call(null, ca, 0, null), Ja = cljs.core.nth.call(null, ca, 1, null);
           h[24] = W;
           p = h;
           cljs.core.truth_(Ja) ? p[1] = 13 : p[1] = 14;
@@ -19710,7 +19710,7 @@ cljs.core.async.mult = function mult(b) {
           return p = h, cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, p, 45, e);
         }
         if (11 === k) {
-          var G = h[17], P = h[25], da = cljs.core.seq.call(null, G);
+          var F = h[17], P = h[25], da = cljs.core.seq.call(null, F);
           h[25] = da;
           p = h;
           p[1] = da ? 16 : 17;
@@ -19754,8 +19754,8 @@ cljs.core.async.mult = function mult(b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (15 === k) {
-          var K = h[14], J = h[15], L = h[16], G = h[17], Na = h[2], Oa = G, Pa = J, Qa = L;
-          h[14] = K + 1;
+          var J = h[14], I = h[15], K = h[16], F = h[17], Na = h[2], Oa = F, Pa = I, Qa = K;
+          h[14] = J + 1;
           h[15] = Pa;
           h[16] = Qa;
           h[17] = Oa;
@@ -19783,11 +19783,11 @@ cljs.core.async.mult = function mult(b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (19 === k) {
-          var P = h[25], na = cljs.core.chunk_first.call(null, P), Ta = cljs.core.chunk_rest.call(null, P), Ua = cljs.core.count.call(null, na), G = Ta, J = na, L = Ua, K = 0;
-          h[14] = K;
-          h[15] = J;
-          h[16] = L;
-          h[17] = G;
+          var P = h[25], na = cljs.core.chunk_first.call(null, P), Ta = cljs.core.chunk_rest.call(null, P), Ua = cljs.core.count.call(null, na), F = Ta, I = na, K = Ua, J = 0;
+          h[14] = J;
+          h[15] = I;
+          h[16] = K;
+          h[17] = F;
           var oa = p = h;
           oa[2] = null;
           oa[1] = 8;
@@ -19819,11 +19819,11 @@ cljs.core.async.mult = function mult(b) {
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (24 === k) {
-          var P = h[25], Ya = h[2], G = cljs.core.next.call(null, P), J = null, K = L = 0;
-          h[14] = K;
-          h[15] = J;
-          h[16] = L;
-          h[17] = G;
+          var P = h[25], Ya = h[2], F = cljs.core.next.call(null, P), I = null, J = K = 0;
+          h[14] = J;
+          h[15] = I;
+          h[16] = K;
+          h[17] = F;
           h[29] = Ya;
           var ta = p = h;
           ta[2] = null;
@@ -22320,8 +22320,8 @@ dommy.core.listen_once_BANG_ = function() {
       if (h < g) {
         var k = cljs.core._nth.call(null, f, h), m = cljs.core.nth.call(null, k, 0, null), l = cljs.core.nth.call(null, k, 1, null);
         dommy.core.listen_BANG_.call(null, a, m, function(b, d, e, f, g, h, k) {
-          return function H(b) {
-            dommy.core.unlisten_BANG_.call(null, a, h, H);
+          return function L(b) {
+            dommy.core.unlisten_BANG_.call(null, a, h, L);
             return k.call(null, b);
           };
         }(e, f, g, h, k, m, l));
@@ -22816,8 +22816,8 @@ touhou_barrage_fighters.ui.departure = function(a) {
         var c = b[1];
         if (2 === c) {
           var c = b[2], d = document.getElementsByClassName("root"), d = dommy.utils.__GT_Array.call(null, d)[0], h = touhou_barrage_fighters.ui.battle_field.call(null, a), d = dommy.core.replace_BANG_.call(null, d, h), h = touhou_barrage_fighters.ui.open_shutter_BANG_.call(null);
-          b[7] = c;
-          b[8] = d;
+          b[7] = d;
+          b[8] = c;
           return cljs.core.async.impl.ioc_helpers.return_chan.call(null, b, h);
         }
         return 1 === c ? (c = touhou_barrage_fighters.ui.close_shutter_BANG_.call(null), d = cljs.core.async.timeout.call(null, 1E3), b[9] = c, cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, b, 2, d)) : null;
@@ -23324,159 +23324,32 @@ touhou_barrage_fighters.battle.hit_QMARK_ = function(a, b, c) {
 touhou_barrage_fighters.battle.calc_damage_point = function(a, b, c) {
   var d = (new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359)).cljs$core$IFn$_invoke$arity$1(a) + (new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359)).cljs$core$IFn$_invoke$arity$1(c);
   a = (new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650)).cljs$core$IFn$_invoke$arity$1(a) + (new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650)).cljs$core$IFn$_invoke$arity$1(c);
-  c = (new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093)).cljs$core$IFn$_invoke$arity$1(b) + (new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093)).cljs$core$IFn$_invoke$arity$1((new cljs.core.Keyword(null, "equipment", "equipment", 2090260736)).cljs$core$IFn$_invoke$arity$2(touhou_barrage_fighters.data.equipments, b));
-  b = (new cljs.core.Keyword(null, "m-defence", "m-defence", 4231833186)).cljs$core$IFn$_invoke$arity$1(b) + (new cljs.core.Keyword(null, "m-defence", "m-defence", 4231833186)).cljs$core$IFn$_invoke$arity$1((new cljs.core.Keyword(null, "equipment", "equipment", 2090260736)).cljs$core$IFn$_invoke$arity$2(touhou_barrage_fighters.data.equipments, b));
+  c = (new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093)).cljs$core$IFn$_invoke$arity$1(b) + (new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.equipments.call(null, (new cljs.core.Keyword(null, "equipment", "equipment", 2090260736)).cljs$core$IFn$_invoke$arity$1(b)));
+  b = (new cljs.core.Keyword(null, "m-defence", "m-defence", 4231833186)).cljs$core$IFn$_invoke$arity$1(b) + (new cljs.core.Keyword(null, "m-defence", "m-defence", 4231833186)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.equipments.call(null, (new cljs.core.Keyword(null, "equipment", "equipment", 2090260736)).cljs$core$IFn$_invoke$arity$1(b)));
   d -= c;
   b = a - b;
   d = d > b ? d : b;
   return 0 > d ? 0 : d;
 };
-touhou_barrage_fighters.battle.battle_loop = function(a, b, c) {
+touhou_barrage_fighters.battle.battle = function(a, b, c) {
   cljs.core.print.call(null, (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b), "vs", (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(c));
-  var d = cljs.core.async.chan.call(null, 1);
-  cljs.core.async.impl.dispatch.run.call(null, function() {
-    var a = function() {
-      return function(a) {
-        return function() {
-          var b = null, c = function() {
-            var a = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-            a[0] = b;
-            a[1] = 1;
-            return a;
-          }, d = function(b) {
-            for (;;) {
-              var c = function() {
-                try {
-                  for (;;) {
-                    var c = a.call(null, b);
-                    if (!cljs.core.keyword_identical_QMARK_.call(null, c, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                      return c;
-                    }
-                  }
-                } catch (d) {
-                  if (d instanceof Object) {
-                    return b[5] = d, cljs.core.async.impl.ioc_helpers.process_exception.call(null, b), new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-                  }
-                  if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                    throw d;
-                  }
-                  return null;
-                }
-              }();
-              if (!cljs.core.keyword_identical_QMARK_.call(null, c, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                return c;
-              }
-            }
-          }, b = function(a) {
-            switch(arguments.length) {
-              case 0:
-                return c.call(this);
-              case 1:
-                return d.call(this, a);
-            }
-            throw Error("Invalid arity: " + arguments.length);
-          };
-          b.cljs$core$IFn$_invoke$arity$0 = c;
-          b.cljs$core$IFn$_invoke$arity$1 = d;
-          return b;
-        }();
-      }(function(a) {
-        var d = a[1];
-        if (1 === d) {
-          var d = (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(b), e = (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(c), f = (new cljs.core.Keyword(null, "cards", "cards", 1108335317)).cljs$core$IFn$_invoke$arity$1(b), l = (new cljs.core.Keyword(null, "cards", "cards", 1108335317)).cljs$core$IFn$_invoke$arity$1(c), n, q;
-          a[7] = f;
-          a[8] = l;
-          a[9] = d;
-          a[10] = e;
-          a[2] = null;
-          a[1] = 2;
-          return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (2 === d) {
-          n = a[7];
-          q = a[8];
-          var l = a[11], e = a[12], e = a[9], d = a[10], r = cljs.core.first.call(null, n).call(null, touhou_barrage_fighters.data.spells), f = cljs.core.first.call(null, q).call(null, touhou_barrage_fighters.data.spells), l = touhou_barrage_fighters.battle.hit_QMARK_.call(null, b, c, r), s = touhou_barrage_fighters.battle.hit_QMARK_.call(null, c, b, f), p = touhou_barrage_fighters.battle.calc_damage_point.call(null, b, c, r), t = touhou_barrage_fighters.battle.calc_damage_point.call(null, c, b, 
-          r), e = e - t, d = d - p;
-          n = cljs.core.rest.call(null, n);
-          q = cljs.core.rest.call(null, q);
-          p = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b);
-          p = cljs.core.print.call(null, p, "\u306e\u653b\u6483");
-          r = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(r);
-          r = cljs.core.print.call(null, "\u30b9\u30da\u30eb\u30ab\u30fc\u30c9\u300c", r, "\u300d");
-          a[13] = p;
-          a[11] = f;
-          a[12] = l;
-          a[14] = s;
-          a[15] = q;
-          a[16] = n;
-          a[17] = e;
-          a[18] = d;
-          a[19] = r;
-          a[1] = l ? 4 : 5;
-          return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (3 === d) {
-          return d = a[2], cljs.core.async.impl.ioc_helpers.return_chan.call(null, a, d);
-        }
-        if (4 === d) {
-          return a[2] = "\u30d2\u30c3\u30c8\uff01", a[1] = 6, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (5 === d) {
-          return a[2] = "\u5916\u308c\u305f!", a[1] = 6, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (6 === d) {
-          return e = a[12], d = a[18], f = cljs.core.print.call(null, a[2]), l = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(c), d = cljs.core.print.call(null, l, ":\u6b8b\u308a\u30e9\u30a4\u30d5", d), l = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(c), l = cljs.core.print.call(null, l, "\u306e\u653b\u6483"), a[20] = f, a[21] = l, a[22] = d, cljs.core.truth_(e) ? a[1] = 7 : a[1] = 8, new cljs.core.Keyword(null, 
-          "recur", "recur", 1122293407);
-        }
-        if (7 === d) {
-          return a[2] = "\u30d2\u30c3\u30c8\uff01", a[1] = 9, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (8 === d) {
-          return a[2] = "\u5916\u308c\u305f!", a[1] = 9, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (9 === d) {
-          return l = a[11], e = a[17], d = a[18], f = cljs.core.print.call(null, a[2]), l = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(l), l = cljs.core.print.call(null, "\u30b9\u30da\u30eb\u30ab\u30fc\u30c9\u300c", l, "\u300d"), s = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b), s = cljs.core.print.call(null, s, ":\u6b8b\u308a\u30e9\u30a4\u30d5", e), d = 0 > e || 0 > d, a[23] = s, a[24] = l, a[25] = f, cljs.core.truth_(d) ? 
-          a[1] = 10 : a[1] = 11, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (10 === d) {
-          e = a[17];
-          d = a[18];
-          f = [new cljs.core.Keyword(null, "player", "player", 4323118675), new cljs.core.Keyword(null, "enemy", "enemy", 1110557434)];
-          l = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b);
-          s = (new cljs.core.Keyword(null, "words", "words", 1127222811)).cljs$core$IFn$_invoke$arity$1(b);
-          r = (new cljs.core.Keyword(null, "p-attack", "p-attack", 2810834359)).cljs$core$IFn$_invoke$arity$1(b);
-          q = (new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650)).cljs$core$IFn$_invoke$arity$1(b);
-          n = (new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093)).cljs$core$IFn$_invoke$arity$1(b);
-          var p = (new cljs.core.Keyword(null, "m-defence", "m-defence", 4231833186)).cljs$core$IFn$_invoke$arity$1(b), t = (new cljs.core.Keyword(null, "job", "job", 1014009647)).cljs$core$IFn$_invoke$arity$1(b), u = (new cljs.core.Keyword(null, "cards", "cards", 1108335317)).cljs$core$IFn$_invoke$arity$1(b), w = (new cljs.core.Keyword(null, "equipment", "equipment", 2090260736)).cljs$core$IFn$_invoke$arity$1(b), v = (new cljs.core.Keyword(null, "level", "level", 1116770038)).cljs$core$IFn$_invoke$arity$1(b), 
-          C = (new cljs.core.Keyword(null, "exp", "exp", 1014005135)).cljs$core$IFn$_invoke$arity$1(b), H = (new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(b), e = touhou_barrage_fighters.data.__GT_Character.call(null, l, s, e, r, q, n, p, t, u, w, v, C, H), l = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b), s = (new cljs.core.Keyword(null, "words", "words", 1127222811)).cljs$core$IFn$_invoke$arity$1(c), r = (new cljs.core.Keyword(null, 
-          "p-attack", "p-attack", 2810834359)).cljs$core$IFn$_invoke$arity$1(c);
-          q = (new cljs.core.Keyword(null, "m-attack", "m-attack", 1877370650)).cljs$core$IFn$_invoke$arity$1(c);
-          n = (new cljs.core.Keyword(null, "p-defence", "p-defence", 3104437093)).cljs$core$IFn$_invoke$arity$1(c);
-          p = (new cljs.core.Keyword(null, "m-defence", "m-defence", 4231833186)).cljs$core$IFn$_invoke$arity$1(c);
-          t = (new cljs.core.Keyword(null, "job", "job", 1014009647)).cljs$core$IFn$_invoke$arity$1(c);
-          u = (new cljs.core.Keyword(null, "cards", "cards", 1108335317)).cljs$core$IFn$_invoke$arity$1(c);
-          w = (new cljs.core.Keyword(null, "equipment", "equipment", 2090260736)).cljs$core$IFn$_invoke$arity$1(c);
-          v = (new cljs.core.Keyword(null, "level", "level", 1116770038)).cljs$core$IFn$_invoke$arity$1(c);
-          C = (new cljs.core.Keyword(null, "exp", "exp", 1014005135)).cljs$core$IFn$_invoke$arity$1(c);
-          H = (new cljs.core.Keyword(null, "img", "img", 1014008629)).cljs$core$IFn$_invoke$arity$1(c);
-          d = touhou_barrage_fighters.data.__GT_Character.call(null, l, s, d, r, q, n, p, t, u, w, v, C, H);
-          d = cljs.core.PersistentHashMap.fromArrays.call(null, f, [e, d]);
-          a[2] = d;
-          a[1] = 12;
-          return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        return 11 === d ? (q = a[15], n = a[16], e = a[17], d = a[18], a[7] = n, a[8] = q, a[9] = e, a[10] = d, a[2] = null, a[1] = 2, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 12 === d ? (d = a[2], a[2] = d, a[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
-      });
-    }(), f = function() {
-      var b = a.call(null);
-      b[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = d;
-      return b;
-    }();
-    return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, f);
-  });
-  return d;
+  var d = (new cljs.core.Keyword(null, "cards", "cards", 1108335317)).cljs$core$IFn$_invoke$arity$1(b), e = (new cljs.core.Keyword(null, "cards", "cards", 1108335317)).cljs$core$IFn$_invoke$arity$1(c);
+  a = cljs.core.first.call(null, d).call(null, touhou_barrage_fighters.data.spells);
+  cljs.core.first.call(null, e).call(null, touhou_barrage_fighters.data.spells);
+  (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(b);
+  var f = (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(c), g = (e = touhou_barrage_fighters.battle.hit_QMARK_.call(null, b, c, a)) ? touhou_barrage_fighters.battle.calc_damage_point.call(null, b, c, a) : 0, f = f - g, d = cljs.core.rest.call(null, d);
+  cljs.core.print.call(null, (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b), "\u306e\u653b\u6483");
+  cljs.core.print.call(null, "\u30b9\u30da\u30eb\u30ab\u30fc\u30c9\u300c", (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(a), "\u300d");
+  cljs.core.print.call(null, e ? "\u30d2\u30c3\u30c8\uff01" : "\u5916\u308c\u305f!");
+  cljs.core.print.call(null, (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(c), "\u306b", g, "\u306e\u30c0\u30e1\u30fc\u30b8");
+  return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "attacker", "attacker", 1552645223), cljs.core.merge.call(null, b, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "cards", "cards", 1108335317), d], null)), new cljs.core.Keyword(null, "target", "target", 4427965699), cljs.core.merge.call(null, c, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "hp", "hp", 1013907578), f], null))], null);
 };
-touhou_barrage_fighters.battle.ready_for_battle = function(a, b) {
+touhou_barrage_fighters.battle.halt_QMARK_ = function(a) {
+  return cljs.core.every_QMARK_.call(null, function(a) {
+    return a.call(null, new cljs.core.Keyword(null, "hp", "hp", 1013907578), cljs.core.zero_QMARK_);
+  }, a);
+};
+touhou_barrage_fighters.battle.battle_loop = function(a, b) {
   var c = cljs.core.async.chan.call(null, 1);
   cljs.core.async.impl.dispatch.run.call(null, function() {
     var d = function() {
@@ -23526,7 +23399,21 @@ touhou_barrage_fighters.battle.ready_for_battle = function(a, b) {
         }();
       }(function(c) {
         var d = c[1];
-        return 3 === d ? cljs.core.async.impl.ioc_helpers.return_chan.call(null, c, c[2]) : 2 === d ? (c[2] = null, c[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 1 === d ? (c[7] = b, c[8] = a, c[2] = null, c[1] = 2, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
+        if (6 === d) {
+          return d = c, d[2] = c[2], d[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+        }
+        if (5 === d || 4 === d) {
+          return c[2] = null, c[1] = 6, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+        }
+        if (3 === d) {
+          return d = c[2], cljs.core.async.impl.ioc_helpers.return_chan.call(null, c, d);
+        }
+        if (2 === d) {
+          var d = touhou_barrage_fighters.battle.halt_QMARK_.call(null, a), e = touhou_barrage_fighters.battle.halt_QMARK_.call(null, b);
+          cljs.core.truth_(d || e) ? c[1] = 4 : c[1] = 5;
+          return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+        }
+        return 1 === d ? (c[7] = b, c[8] = a, c[2] = null, c[1] = 2, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
       });
     }(), e = function() {
       var a = d.call(null);
@@ -23560,7 +23447,7 @@ touhou_barrage_fighters.debug.battle_test = function() {
       return function(a) {
         return function() {
           var b = null, c = function() {
-            var a = [null, null, null, null, null, null, null, null, null];
+            var a = [null, null, null, null, null, null, null];
             a[0] = b;
             a[1] = 1;
             return a;
@@ -23602,14 +23489,13 @@ touhou_barrage_fighters.debug.battle_test = function() {
           return b;
         }();
       }(function(a) {
-        var b = a[1];
-        if (2 === b) {
-          var b = a[7], c = a[8], g = a[2], b = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b), h = (new cljs.core.Keyword(null, "player", "player", 4323118675)).cljs$core$IFn$_invoke$arity$1(g), h = (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(h), c = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(c), g = (new cljs.core.Keyword(null, "enemy", "enemy", 1110557434)).cljs$core$IFn$_invoke$arity$1(g), 
-          g = (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(g), b = [cljs.core.str(b), cljs.core.str(":"), cljs.core.str(h), cljs.core.str(c), cljs.core.str(":"), cljs.core.str(g)].join(""), b = alert(b);
+        if (1 === a[1]) {
+          var b = (new cljs.core.Keyword(null, "alice", "alice", 1106807282)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.characters), c = (new cljs.core.Keyword(null, "reimu", "reimu", 1122298928)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.characters), g = touhou_barrage_fighters.battle.battle.call(null, new cljs.core.Keyword(null, "lake", "lake", 1017218305), b, c), b = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(b), h = 
+          (new cljs.core.Keyword(null, "attacker", "attacker", 1552645223)).cljs$core$IFn$_invoke$arity$1(g), h = (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(h), c = (new cljs.core.Keyword(null, "name", "name", 1017277949)).cljs$core$IFn$_invoke$arity$1(c), g = (new cljs.core.Keyword(null, "target", "target", 4427965699)).cljs$core$IFn$_invoke$arity$1(g), g = (new cljs.core.Keyword(null, "hp", "hp", 1013907578)).cljs$core$IFn$_invoke$arity$1(g), b = [cljs.core.str(b), 
+          cljs.core.str(":"), cljs.core.str(h), cljs.core.str(c), cljs.core.str(":"), cljs.core.str(g)].join(""), b = alert(b);
           return cljs.core.async.impl.ioc_helpers.return_chan.call(null, a, b);
         }
-        return 1 === b ? (b = (new cljs.core.Keyword(null, "alice", "alice", 1106807282)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.characters), g = (new cljs.core.Keyword(null, "reimu", "reimu", 1122298928)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.characters), h = touhou_barrage_fighters.battle.battle_loop.call(null, new cljs.core.Keyword(null, "lake", "lake", 1017218305), b, g), a[7] = b, a[8] = g, cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, a, 2, 
-        h)) : null;
+        return null;
       });
     }(), c = function() {
       var c = b.call(null);
@@ -23747,16 +23633,13 @@ touhou_barrage_fighters.storage.load = function() {
 goog.exportSymbol("touhou_barrage_fighters.storage.load", touhou_barrage_fighters.storage.load);
 touhou_barrage_fighters.core = {};
 touhou_barrage_fighters.core.character_loop = function(a, b) {
-  dommy.core.listen_BANG_.call(null, document.getElementById("temple-tatie"), new cljs.core.Keyword(null, "click", "click", 1108654330), function(b) {
-    return cljs.core.async.put_BANG_.call(null, a, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "touch", "touch", 1124455089), b], null));
-  });
   var c = cljs.core.async.chan.call(null, 1);
   cljs.core.async.impl.dispatch.run.call(null, function() {
     var d = function() {
       return function(a) {
         return function() {
           var b = null, c = function() {
-            var a = [null, null, null, null, null, null, null, null, null, null];
+            var a = [null, null, null, null, null, null, null, null, null, null, null];
             a[0] = b;
             a[1] = 1;
             return a;
@@ -23811,7 +23694,7 @@ touhou_barrage_fighters.core.character_loop = function(a, b) {
         }
         if (3 === d) {
           var e = c[7], f = cljs.core.keys.call(null, e), f = cljs.core.first.call(null, f);
-          cljs.core._EQ_.call(null, new cljs.core.Keyword(null, "timeout", "timeout", 3994960083), f) ? c[1] = 8 : cljs.core._EQ_.call(null, new cljs.core.Keyword(null, "touch", "touch", 1124455089), f) ? c[1] = 6 : new cljs.core.Keyword(null, "else", "else", 1017020587) && (c[1] = 9);
+          cljs.core._EQ_.call(null, new cljs.core.Keyword(null, "timeout", "timeout", 3994960083), f) ? c[1] = 8 : cljs.core._EQ_.call(null, new cljs.core.Keyword(null, "touch", "touch", 1124455089), f) ? c[1] = 6 : new cljs.core.Keyword(null, "else", "else", 1017020587) && (c[1] = 12);
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (4 === d) {
@@ -23820,7 +23703,7 @@ touhou_barrage_fighters.core.character_loop = function(a, b) {
         if (5 === d) {
           var e = c[7], l = c[2], f = (new cljs.core.Keyword(null, "exit", "exit", 1017031824)).cljs$core$IFn$_invoke$arity$1(e);
           c[8] = l;
-          cljs.core.truth_(f) ? c[1] = 10 : c[1] = 11;
+          cljs.core.truth_(f) ? c[1] = 13 : c[1] = 14;
           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
         }
         if (6 === d) {
@@ -23901,8 +23784,9 @@ touhou_barrage_fighters.core.character_loop = function(a, b) {
           c[9] = f;
           return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 7, n);
         }
-        return 7 === d ? (f = c[2], c[2] = f, c[1] = 5, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 8 === d ? (f = touhou_barrage_fighters.ui.say_BANG_.call(null, b, new cljs.core.Keyword(null, "in-temple", "in-temple", 3345930599)), c[2] = f, c[1] = 5, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 9 === d ? (c[2] = null, c[1] = 5, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 10 === d ? (c[2] = null, c[1] = 12, new cljs.core.Keyword(null, "recur", "recur", 
-        1122293407)) : 11 === d ? cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 13, a) : 12 === d ? (f = c[2], c[2] = f, c[1] = 4, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 13 === d ? (e = c[2], c[7] = e, c[2] = null, c[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
+        return 7 === d ? (f = c[2], c[2] = f, c[1] = 5, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 8 === d ? (c[2] = null, c[1] = 11, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 9 === d ? (f = c[2], c[2] = f, c[1] = 5, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 10 === d ? (l = c[2], f = cljs.core.async.close_BANG_.call(null, a), c[10] = l, c[2] = f, cljs.core.async.impl.ioc_helpers.process_exception.call(null, c), new cljs.core.Keyword(null, "recur", 
+        "recur", 1122293407)) : 11 === d ? (cljs.core.async.impl.ioc_helpers.add_exception_frame.call(null, c, 10, Object, null, 9), f = touhou_barrage_fighters.ui.say_BANG_.call(null, b, new cljs.core.Keyword(null, "in-temple", "in-temple", 3345930599)), c[2] = f, cljs.core.async.impl.ioc_helpers.process_exception.call(null, c), new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 12 === d ? (c[2] = null, c[1] = 5, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 13 === d ? (c[2] = 
+        null, c[1] = 15, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 14 === d ? cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 16, a) : 15 === d ? (f = c[2], c[2] = f, c[1] = 4, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 16 === d ? (e = c[2], c[7] = e, c[2] = null, c[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
       });
     }(), f = function() {
       var a = d.call(null);
@@ -24000,117 +23884,23 @@ touhou_barrage_fighters.core.in_temple_win = function(a, b) {
     return touhou_barrage_fighters.ui.switch_content.call(null, new cljs.core.Keyword(null, "#map", "#map", 1015054795));
   });
   touhou_barrage_fighters.core.character_loop.call(null, c, cljs.core.first.call(null, (new cljs.core.Keyword(null, "member", "member", 4231101964)).cljs$core$IFn$_invoke$arity$1(a)));
+  dommy.core.listen_BANG_.call(null, document.getElementById("temple-tatie"), new cljs.core.Keyword(null, "click", "click", 1108654330), function(a) {
+    return cljs.core.async.put_BANG_.call(null, c, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "touch", "touch", 1124455089), a], null));
+  });
   return touhou_barrage_fighters.ui.start_watch_BANG_.call(null);
 };
 goog.exportSymbol("touhou_barrage_fighters.core.in_temple_win", touhou_barrage_fighters.core.in_temple_win);
 touhou_barrage_fighters.core.init_player = function() {
-  var a = document.querySelector("input#player-name").value, b = document.querySelector("input#player-pass").value, a = touhou_barrage_fighters.data.__GT_Player.call(null, a, b, 0, cljs.core.PersistentArrayMap.EMPTY, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.Keyword(null, "reimu", "reimu", 1122298928)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.characters)], null), 0);
+  var a = document.querySelector("input#player-name").value, b = document.querySelector("input#player-pass").value, a = touhou_barrage_fighters.data.__GT_Player.call(null, a, b, 0, cljs.core.PersistentArrayMap.EMPTY, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.Keyword(null, "alice", "alice", 1106807282)).cljs$core$IFn$_invoke$arity$1(touhou_barrage_fighters.data.characters)], null), 0);
   touhou_barrage_fighters.storage.save.call(null, a);
   return a;
 };
 goog.exportSymbol("touhou_barrage_fighters.core.init_player", touhou_barrage_fighters.core.init_player);
-touhou_barrage_fighters.core.player_loop = function(a, b) {
-  var c = cljs.core.async.chan.call(null, 1);
-  cljs.core.async.impl.dispatch.run.call(null, function() {
-    var d = function() {
-      return function(a) {
-        return function() {
-          var b = null, c = function() {
-            var a = [null, null, null, null, null, null, null, null, null, null, null];
-            a[0] = b;
-            a[1] = 1;
-            return a;
-          }, d = function(b) {
-            for (;;) {
-              var c = function() {
-                try {
-                  for (;;) {
-                    var c = a.call(null, b);
-                    if (!cljs.core.keyword_identical_QMARK_.call(null, c, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                      return c;
-                    }
-                  }
-                } catch (d) {
-                  if (d instanceof Object) {
-                    return b[5] = d, cljs.core.async.impl.ioc_helpers.process_exception.call(null, b), new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-                  }
-                  if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                    throw d;
-                  }
-                  return null;
-                }
-              }();
-              if (!cljs.core.keyword_identical_QMARK_.call(null, c, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                return c;
-              }
-            }
-          }, b = function(a) {
-            switch(arguments.length) {
-              case 0:
-                return c.call(this);
-              case 1:
-                return d.call(this, a);
-            }
-            throw Error("Invalid arity: " + arguments.length);
-          };
-          b.cljs$core$IFn$_invoke$arity$0 = c;
-          b.cljs$core$IFn$_invoke$arity$1 = d;
-          return b;
-        }();
-      }(function(c) {
-        var d = c[1];
-        if (1 === d) {
-          return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 2, b);
-        }
-        if (2 === d) {
-          var d = a, e = c[2];
-          c[7] = e;
-          c[8] = d;
-          c[2] = null;
-          c[1] = 3;
-          return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (3 === d) {
-          var e = c[7], d = c[8], k = c[9], k = cljs.core.keys.call(null, e), k = cljs.core.first.call(null, k), e = document.getElementsByClassName("content"), e = dommy.utils.__GT_Array.call(null, e)[0], d = touhou_barrage_fighters.ui.temple.call(null, d), d = dommy.core.replace_BANG_.call(null, e, d), d = k.call(null, d, new cljs.core.Keyword(null, "temple", "temple", 4431519679));
-          c[9] = k;
-          cljs.core.truth_(d) ? c[1] = 5 : c[1] = 6;
-          return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (4 === d) {
-          return d = c[2], cljs.core.async.impl.ioc_helpers.return_chan.call(null, c, d);
-        }
-        if (5 === d) {
-          return c[2] = new cljs.core.Keyword(null, "map", "map", 1014012110), c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (6 === d) {
-          return d = c[8], k = c[9], e = document.getElementsByClassName("content"), e = dommy.utils.__GT_Array.call(null, e)[0], d = touhou_barrage_fighters.ui.in_map.call(null, d), d = dommy.core.replace_BANG_.call(null, e, d), d = k.call(null, d, new cljs.core.Keyword(null, "temple", "temple", 4431519679)), cljs.core.truth_(d) ? c[1] = 8 : c[1] = 9, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (7 === d) {
-          return c[10] = c[2], cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, c, 11, b);
-        }
-        if (8 === d) {
-          return c[2] = null, c[1] = 10, new cljs.core.Keyword(null, "recur", "recur", 1122293407);
-        }
-        if (9 === d) {
-          throw c = [cljs.core.str("No matching clause: "), cljs.core.str(new cljs.core.Keyword(null, "temple", "temple", 4431519679))].join(""), Error(c);
-        }
-        return 10 === d ? (d = c[2], c[2] = d, c[1] = 7, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : 11 === d ? (d = c[8], e = c[2], c[7] = e, c[8] = d, c[2] = null, c[1] = 3, new cljs.core.Keyword(null, "recur", "recur", 1122293407)) : null;
-      });
-    }(), e = function() {
-      var a = d.call(null);
-      a[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c;
-      return a;
-    }();
-    return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, e);
-  });
-  return c;
-};
 touhou_barrage_fighters.core.main = function() {
   var a = cljs.core.async.chan.call(null);
   if (cljs.core.truth_(goog.net.cookies.get("player"))) {
     var b = touhou_barrage_fighters.storage.load.call(null);
     touhou_barrage_fighters.core.in_temple_win.call(null, b, a);
-    touhou_barrage_fighters.core.player_loop.call(null, b, a);
     return b;
   }
   var c = cljs.core.async.chan.call(null, 1);
@@ -24119,7 +23909,7 @@ touhou_barrage_fighters.core.main = function() {
       return function(a) {
         return function() {
           var b = null, c = function() {
-            var a = [null, null, null, null, null, null, null, null, null, null, null];
+            var a = [null, null, null, null, null, null, null, null, null, null];
             a[0] = b;
             a[1] = 1;
             return a;
@@ -24163,21 +23953,20 @@ touhou_barrage_fighters.core.main = function() {
       }(function(b) {
         var c = b[1];
         if (2 === c) {
-          var d = b[2], e = touhou_barrage_fighters.core.in_temple_win.call(null, d, a), d = touhou_barrage_fighters.core.player_loop.call(null, d, a), m = touhou_barrage_fighters.core.tutorial.call(null);
-          b[7] = e;
-          b[8] = d;
-          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, b, m);
+          var d = touhou_barrage_fighters.core.in_temple_win.call(null, b[2], a), e = touhou_barrage_fighters.core.tutorial.call(null);
+          b[7] = d;
+          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, b, e);
         }
         if (1 === c) {
-          var l = document.getElementsByClassName("root"), n = dommy.utils.__GT_Array.call(null, l), q = n[0], r = touhou_barrage_fighters.ui.init_acount.call(null), s = dommy.core.replace_BANG_.call(null, q, r), p = document.getElementById("game-start"), e = function() {
+          var m = document.getElementsByClassName("root"), l = dommy.utils.__GT_Array.call(null, m), n = l[0], q = touhou_barrage_fighters.ui.init_acount.call(null), r = dommy.core.replace_BANG_.call(null, n, q), s = document.getElementById("game-start"), d = function() {
             return function(b, c, d, e, f, g, h) {
               return function() {
                 return cljs.core.async.put_BANG_.call(null, a, touhou_barrage_fighters.core.init_player.call(null));
               };
-            }(l, n, q, r, s, p, c);
-          }(), e = dommy.core.listen_BANG_.call(null, p, new cljs.core.Keyword(null, "click", "click", 1108654330), e);
-          b[9] = e;
-          b[10] = s;
+            }(m, l, n, q, r, s, c);
+          }(), d = dommy.core.listen_BANG_.call(null, s, new cljs.core.Keyword(null, "click", "click", 1108654330), d);
+          b[8] = d;
+          b[9] = r;
           return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, b, 2, a);
         }
         return null;

@@ -1,7 +1,7 @@
 (ns touhou-barrage-fighters.core
   (:use [touhou-barrage-fighters.data :only [->Player characters]]
         [touhou-barrage-fighters.debug :only [print-chara]]
-        [cljs.core.async :only [<! put! timeout chan]])
+        [cljs.core.async :only [<! >! put! timeout chan close!]])
   (:use-macros [dommy.macros :only [sel1 sel]]
                [cljs.core.async.macros :only [go]])
   (:require [touhou-barrage-fighters.storage :as st]
@@ -20,7 +20,8 @@
                        (ui/switch-behave! :#temple-tatie :normal :ikari)
                        (<! (timeout 3000))
                        (ui/switch-behave! :#temple-tatie :ikari :normal)))
-          :timeout (ui/say! chara :in-temple)
+          :timeout (try (ui/say! chara :in-temple)
+                     (catch js/Object e (close! chan)))
           nil)
         (if (:exit input)
           nil
@@ -54,7 +55,7 @@
     (character-loop chara-chan (-> player :member first))
     ; 立ち絵の判定
     (dommy/listen! (sel1 :#temple-tatie) 
-                 :click #(put! player-chan {:touch %}))
+                 :click #(put! chara-chan {:touch %}))
     ; 時計をスタートさせる
     (ui/start-watch!)))
 
@@ -62,30 +63,9 @@
   []
   (let [name (. (sel1 :input#player-name) -value)
         pass (. (sel1 :input#player-pass) -value)
-        new-player (->Player name pass 0 {} [(:reimu characters)] 0)]
+        new-player (->Player name pass 0 {} [(:alice characters)] 0)]
     (st/save new-player)
     new-player))
-
-(defn player-loop
-  "プレイヤーデータを扱う"
-  [new-player chan]
-  (go (loop [player new-player
-             input (<! chan)]
-        (case (-> input keys first)
-          :save (do 
-                  ; セーブ
-                  (st/save player)
-                  (recur player (<! chan)))
-          :update ; プレイヤー情報をアップデート
-                  (let [ks (second input)
-                        f (input 2)
-                        new-player (update-in ks f)]
-                    (recur new-player (<! chan)))
-          :get ; プレイヤー情報を取得
-               (do (>! chan player)
-                 (recur player (<! chan)))
-          nil)
-        (recur player (<! chan)))))
 
 (defn main 
   []
@@ -94,8 +74,7 @@
     (if (cks/get "player")
       ; ゲームスタート
       (doto (st/load)
-        (in-temple-win player-chan)
-        (player-loop player-chan))
+        (in-temple-win player-chan))
       ; set signup ui
       (go
         (dommy/replace! (sel1 :.root) (ui/init-acount))
@@ -103,8 +82,7 @@
                        :click #(put! player-chan (init-player)))
         ; 認証ボタンが押されるまでブロック
         (doto (<! player-chan)
-          (in-temple-win player-chan)
-          (player-loop player-chan))
+          (in-temple-win player-chan))
         (tutorial)))))
 
 (set! *print-fn* #(.log js/console (apply str %&)))

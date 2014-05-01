@@ -31,11 +31,11 @@
 
 (defn ^:export battle-test
   []
-  (go (let [player (:alice data/characters)
-            enemy (:reimu data/characters)
-            result (<! (bt/battle-loop :lake player enemy))]
-    (js/alert (str (:name player) ":" (-> result :player :hp)
-                   (:name enemy) ":" (-> result :enemy :hp))))))
+  (go (let [attacker (:alice data/characters)
+            target (:reimu data/characters)
+            result (bt/battle :lake attacker target)]
+    (js/alert (str (:name attacker) ":" (-> result :attacker :hp)
+                   (:name target) ":" (-> result :target :hp))))))
 
 (defn ^:export get-damage-point
   []
