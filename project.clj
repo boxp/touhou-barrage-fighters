@@ -4,11 +4,11 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-2173"]
+                 [org.clojure/clojurescript "0.0-2202"]
                  [prismatic/dommy "0.1.1"]
                  [ring/ring-jetty-adapter "1.1.6"]
                  [cljs-http "0.1.2"]]
-  :plugins [[lein-cljsbuild "1.0.1"]
+  :plugins [[lein-cljsbuild "1.0.3"]
             [com.keminglabs/cljx "0.3.2"]]
   :main touhou-barrage-fighters.core
   :source-paths ["src-clj"]

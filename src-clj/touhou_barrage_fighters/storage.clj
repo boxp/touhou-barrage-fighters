@@ -8,7 +8,7 @@
   "データベースのテーブルを定義します"
   [url]
   (sql/db-do-commands url
-    (sql/create-table-ddl :acounts [:id :text] [:pass :text] [:token :text] [:tokensecret :text])))
+    (sql/create-table-ddl :acounts [:id :text] [:pass :text] [:player :text])))
 
 (defn save-acount!
   "アカウントをデータベースに登録"

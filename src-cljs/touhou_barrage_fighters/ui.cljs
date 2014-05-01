@@ -1,8 +1,9 @@
 (ns touhou-barrage-fighters.ui
   (:require [dommy.core :as dommy]
+            [touhou-barrage-fighters.data :as dt]
             [goog.fx.dom :as fxdom]
-            [cljs.core.async :refer [<! timeout put!]])
-  (:use-macros [dommy.macros :only [deftemplate sel1]]
+            [cljs.core.async :refer [<! >! timeout put!]])
+  (:use-macros [dommy.macros :only [deftemplate node sel1]]
                [cljs.core.async.macros :only [go]]))
 
 (deftemplate in-map [player]
@@ -56,12 +57,6 @@
         [:li "妖怪退治"]
         [:li "紅い妖霧の謎"]]]])
 
-(deftemplate battle-field
-  [field-name]
-  [:div#wrapper.root
-    [:div#content]
-    [:div#cards]])
-
 (defn switch-content 
   [id]
   (dommy/remove-class! (sel1 :.current) :current)
@@ -80,15 +75,26 @@
         {:type "button"
          :value "OK"}]]])
 
+(defn battle
+  [player enemys chan]
+  (node 
+    [:div#battle
+      [:div#battle-info]
+      [:div#battle-field]]))
+
 (defn say!
   [chara genre]
   (set! (.-innerHTML (sel1 :#serihu))
      (rand-nth (genre (:words chara)))))
 
 (defn switch-character!
-  [target chara]
-  (set! (.. (sel1 target) -style -backgroundImage)
-    (:img chara)))
+  [target chara-or-key]
+  (let [chara (if (keyword? chara-or-key)
+                (get dt/characters chara-or-key)
+                chara-or-key)]
+    (set! (.. (sel1 target) -style -backgroundImage)
+      (str "url(" (:img chara) ")"))
+    target))
 
 (defn switch-behave!
   [target bef-exp exp]
@@ -116,10 +122,3 @@
     (go (while true
           (dommy/set-text! watch (. (js/Date.) toLocaleString))
           (<! (timeout 1000))))))
-
-(defn departure
-  [place]
-  (go (close-shutter!)
-      (<! (timeout 1000))
-      (dommy/replace! (sel1 :.root) (battle-field place))
-      (open-shutter!)))

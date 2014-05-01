@@ -5,6 +5,9 @@
             [clojure.string :refer [join]])
   (:use-macros [cljs.core.async.macros :only [go]]))
 
+(def ^:export *character-chan* (atom nil))
+(def ^:export *player-chan* (atom nil))
+
 (defn print-chara
   "print character parameter"
   [chara]

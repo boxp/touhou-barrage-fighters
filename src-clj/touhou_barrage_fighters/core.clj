@@ -18,14 +18,9 @@
               (str "." (:uri req)))
         accept (split (get headers "accept") #",")]
     (println (first accept) (slurp (:body req)) (:uri req))
-    (if (empty? (re-seq #"json" (first accept)))
-      {:status 200
-       :headers {"Content-Type" (first accept)}
-       :body (slurp-content (first accept) url)}
-      {:status 200
-       :header {"Content-Type" (first accept)}
-       :body 
-       ))
+    {:status 200
+     :headers {"Content-Type" (first accept)}
+     :body (slurp-content (first accept) url)}))
 
 (defn run-index-jetty!
   [port]

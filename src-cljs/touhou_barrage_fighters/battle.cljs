@@ -84,12 +84,15 @@
   (every? #(% :hp zero?) member))
 
 (defn battle-loop
-  [player-member enemy-member]
-  (go-loop [p-member player-member
+  [player enemy-member chan]
+  (go-loop [input (<! chan)
+            p-member (:member player)
             e-member enemy-member]
     ; 終わり？
-    (if 
-      (or 
-        ; どちらかが全滅
-        (or (halt? player-member)
-              (halt? enemy-member))))))
+    (if (or (halt? p-member)
+            (halt? e-member)) :どちらかが全滅
+      {:player
+        (merge player
+          {:member p-member})
+       :enemy-member
+         e-member})))

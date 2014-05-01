@@ -1,6 +1,6 @@
 (ns touhou-barrage-fighters.core
   (:use [touhou-barrage-fighters.data :only [->Player characters]]
-        [touhou-barrage-fighters.debug :only [print-chara]]
+        [touhou-barrage-fighters.debug :only [print-chara *character-chan* *player-chan*]]
         [cljs.core.async :only [<! >! put! timeout chan close!]])
   (:use-macros [dommy.macros :only [sel1 sel]]
                [cljs.core.async.macros :only [go]])
@@ -12,20 +12,23 @@
 (defn character-loop
   "キャラクターを喋らせる"
   [chan chara]
+  ; for debug
+  (reset! *character-chan* chan)
   ; 台詞の設定
-  (go (loop [input (<! chan)]
-        (case (-> input keys first)
-          :touch (<! (go
-                       (ui/say! chara :selected)
-                       (ui/switch-behave! :#temple-tatie :normal :ikari)
-                       (<! (timeout 3000))
-                       (ui/switch-behave! :#temple-tatie :ikari :normal)))
-          :timeout (try (ui/say! chara :in-temple)
-                     (catch js/Object e (close! chan)))
-          nil)
-        (if (:exit input)
-          nil
-          (recur (<! chan)))))
+  (go (loop [input (<! chan)
+             character chara]
+        (let [new-chara (or (get characters (:update input)) character)]
+          (case (-> input keys first)
+            :touch (<! (go
+                         (ui/say! character :selected)
+                         (ui/switch-behave! :#temple-tatie :normal :ikari)
+                         (<! (timeout 3000))
+                         (ui/switch-behave! :#temple-tatie :ikari :normal)))
+            :timeout (try (ui/say! character :in-temple)
+                       (catch js/Object e (close! chan)))
+            :update (ui/switch-character! :#temple-tatie new-chara)
+            :exit nil)
+          (recur (<! chan) new-chara))))
   (go (while true
         (put! chan {:timeout true})
         (<! (timeout 10000)))))
@@ -70,6 +73,8 @@
 (defn main 
   []
   (let [player-chan (chan)]
+    ; for debug
+    (reset! *player-chan* player-chan)
     ; ユーザー登録
     (if (cks/get "player")
       ; ゲームスタート
