@@ -78,7 +78,7 @@
 (defn battle
   [player enemys chan]
   (node 
-    [:div#battle
+    [:div#battle.root
       [:div#battle-info]
       [:div#battle-field]]))
 
